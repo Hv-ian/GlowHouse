@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Glow House</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
 
+<body>
     <!-- NAV -->
     <nav class="nav">
-      <div class="logo glow-logo">Glow House</div>
-      <ul class="nav-links">
-        <li><a href="#home" data-key="home">Home</a></li>
-        <li><a href="#services" data-key="services">Our Services</a></li>
-        <li><a href="#booking" data-key="booking">Book Appointment</a></li>
-        <li><a href="#calendar" data-key="calendar">Calendar</a></li>
-        <li><a href="#contact" data-key="contact">Contact</a></li>
-        <li class="language-switcher">
+        <div class="logo glow-logo">Glow House</div>
+
+        <!-- Language Switcher - MOVED HERE -->
+        <div class="language-switcher">
             <div class="flags">
                 <span class="flag" data-lang="en">🇬🇧</span>
                 <span class="flag" data-lang="hy">🇦🇲</span>
                 <span class="flag" data-lang="ru">🇷🇺</span>
             </div>
-        </li>
-      </ul>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home" data-key="home">Home</a></li>
+            <li><a href="#services" data-key="services">Our Services</a></li>
+            <li><a href="#booking" data-key="booking">Book Appointment</a></li>
+            <li><a href="#calendar" data-key="calendar">Calendar</a></li>
+            <li><a href="#contact" data-key="contact">Contact</a></li>
+            <!-- REMOVED language-switcher from here -->
+        </ul>
     </nav>
 
     <!-- HERO -->
     <header id="home" class="hero">
-      <div class="hero-background">
-          <div class="image-collage">
-              <img src="images/pic1.jpeg" class="collage-img img-1">
-              <img src="images/pic10.avif" class="collage-img img-2">
-              <img src="images/pic11.jpeg" class="collage-img img-3">
-          </div>
-          <div class="hero-overlay"></div>
-      </div>
+        <div class="hero-background">
+            <div class="image-collage">
+                <img src="images/pic1.jpeg" class="collage-img img-1">
+                <img src="images/pic10.avif" class="collage-img img-2">
+                <img src="images/pic11.jpeg" class="collage-img img-3">
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
 
-      <div class="hero-centre">
-          <h1 class="hero-title glow-title">GLOW HOUSE</h1>
-          <a href="https://maps.app.goo.gl/rBMeqQLyKdimYjbw9" target="_blank" class="hero-address clickable-address">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Russia Street 14/4/2, Abovyan</span>
-          </a>
-          <div class="hero-subtitle"> Armenian Beauty & Skincare Studio</div>
-      </div>
+        <div class="hero-centre">
+            <h1 class="hero-title glow-title">GLOW HOUSE</h1>
+            <a href="https://maps.app.goo.gl/rBMeqQLyKdimYjbw9" target="_blank" class="hero-address clickable-address">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Russia Street 14/4/2, Abovyan</span>
+            </a>
+            <div class="hero-subtitle"> Armenian Beauty & Skincare Studio</div>
+        </div>
 
-      <div class="scroll-indicator">
-          <div class="scroll-arrow"></div>
-      </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
     </header>
 
     <!-- SERVICES -->
@@ -63,7 +77,8 @@
             <img src="images/pic7.jpg" class="service-img">
             <div class="service-text">
                 <h3>Makeup</h3>
-                <p>Professional makeup for every occasion — weddings, events, parties, or natural everyday beauty. Our artists enhance your glow with precision and creativity.</p>
+                <p>Professional makeup for every occasion — weddings, events, parties, or natural everyday beauty. Our
+                    artists enhance your glow with precision and creativity.</p>
                 <div class="service-features">
                     <span>Bridal Makeup</span>
                     <span>Evening Glam</span>
@@ -76,7 +91,8 @@
         <div class="service-row reverse">
             <div class="service-text">
                 <h3>Hairdresser</h3>
-                <p>From modern cuts to vibrant colouring, blowouts, styling, and full transformations. Your hair is treated with premium products and expert care.</p>
+                <p>From modern cuts to vibrant colouring, blowouts, styling, and full transformations. Your hair is
+                    treated with premium products and expert care.</p>
                 <div class="service-features">
                     <span>Hair Coloring</span>
                     <span>Styling</span>
@@ -91,7 +107,8 @@
             <img src="images/pic5.png" class="service-img">
             <div class="service-text">
                 <h3>Nails</h3>
-                <p>Gel nails, nail art, manicures, and flawless designs. Choose from soft natural looks or bold creative patterns — always done with precision.</p>
+                <p>Gel nails, nail art, manicures, and flawless designs. Choose from soft natural looks or bold creative
+                    patterns — always done with precision.</p>
                 <div class="service-features">
                     <span>Gel Manicure</span>
                     <span>Nail Art</span>
@@ -104,7 +121,8 @@
         <div class="service-row reverse">
             <div class="service-text">
                 <h3>Skincare</h3>
-                <p>Luxurious skincare treatments that hydrate, smooth, and brighten. Perfect for stress relief and lasting radiance.</p>
+                <p>Luxurious skincare treatments that hydrate, smooth, and brighten. Perfect for stress relief and
+                    lasting radiance.</p>
                 <div class="service-features">
                     <span>Facials</span>
                     <span>Anti-Aging</span>
@@ -118,26 +136,26 @@
     <!-- BOOKING -->
     <section id="booking" class="section">
         <div class="booking-background" style="background-image: url('images/pic12.jpeg')"></div>
-        
+
         <div class="booking-content">
             <div class="booking-header">
                 <h2 class="section-title" data-key="bookingTitle">Book Your Session</h2>
                 <p class="booking-subtitle" data-key="bookingSubtitle">Select a service to see available times</p>
             </div>
-            
+
             <div class="booking-grid-compact">
                 <!-- Makeup -->
                 <div class="booking-card-compact">
                     <div class="card-icon">💄</div>
                     <h3 data-key="bookMakeup">Makeup</h3>
                     <div class="calendly-widget-compact">
-                        <div class="calendly-inline-widget" 
-                            data-url="https://calendly.com/glowhouseinfo/makeup?hide_event_type_details=1&hide_gdpr_banner=1" 
+                        <div class="calendly-inline-widget"
+                            data-url="https://calendly.com/glowhouseinfo/makeup?hide_event_type_details=1&hide_gdpr_banner=1"
                             style="min-width:150px;height:300px;">
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Hair -->
                 <div class="booking-card-compact">
                     <div class="card-icon">
@@ -145,13 +163,13 @@
                     </div>
                     <h3 data-key="bookHair">Hair</h3>
                     <div class="calendly-widget-compact">
-                        <div class="calendly-inline-widget" 
-                            data-url="https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1" 
+                        <div class="calendly-inline-widget"
+                            data-url="https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1"
                             style="min-width:150px;height:300px;">
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Nails -->
                 <div class="booking-card-compact">
                     <div class="card-icon">
@@ -159,20 +177,20 @@
                     </div>
                     <h3 data-key="bookNails">Nails</h3>
                     <div class="calendly-widget-compact">
-                        <div class="calendly-inline-widget" 
-                            data-url="https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" 
+                        <div class="calendly-inline-widget"
+                            data-url="https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1"
                             style="min-width:150px;height:300px;">
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Skincare -->
                 <div class="booking-card-compact">
                     <div class="card-icon">✨</div>
                     <h3 data-key="bookSkincare">Skincare</h3>
                     <div class="calendly-widget-compact">
-                        <div class="calendly-inline-widget" 
-                            data-url="https://calendly.com/glowhouseinfo/skincare?hide_event_type_details=1&hide_gdpr_banner=1" 
+                        <div class="calendly-inline-widget"
+                            data-url="https://calendly.com/glowhouseinfo/skincare?hide_event_type_details=1&hide_gdpr_banner=1"
                             style="min-width:150px;height:300px;">
                         </div>
                     </div>
@@ -189,7 +207,7 @@
             <p class="calendar-subtitle" data-key="calendarSubtitle">When we're here to make you glow</p>
             <div class="calendar-sparkle">✨</div>
         </div>
-        
+
         <div class="elegant-calendar">
             <!-- Monday -->
             <div class="calendar-day closed" data-day="monday">
@@ -278,7 +296,7 @@
                 </div>
             </div>
         </div>
-        
+
 
         <div class="calendar-footer">
             <div class="hours-summary">
@@ -288,7 +306,7 @@
                     <span data-key="hoursDetail">Tuesday - Sunday: 10:00 - 19:00</span>
                 </div>
             </div>
-            
+
             <a href="#booking" target="_blank" class="glow-button">
                 <span class="button-icon">💫</span>
                 <span data-key="bookSession">Book Your Session</span>
@@ -296,7 +314,7 @@
         </div>
     </section>
 
-        <!-- CONTACT -->
+    <!-- CONTACT -->
     <section id="contact" class="section">
         <h2 class="section-title" data-key="contactTitle">Contact</h2>
         <div class="contact-options">
@@ -325,10 +343,8 @@
             </div>
 
             <div class="contact-card">
-                <a href="https://www.instagram.com/glowhouseoff?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="contact-card-link">
+                <a href="https://www.instagram.com/glowhouseoff?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank" rel="noopener noreferrer" class="contact-card-link">
                     <div class="contact-icon">
                         <i class="fab fa-instagram"></i>
                     </div>
@@ -346,7 +362,7 @@
                 <div class="footer-logo">Glow House</div>
                 <p class="footer-tagline" data-key="footerTagline">Armenian Beauty & Skincare Studio</p>
             </div>
-            
+
             <div class="footer-section">
                 <h4 data-key="quickLinks">Quick Links</h4>
                 <ul class="footer-links">
@@ -356,23 +372,22 @@
                     <li><a href="#contact" data-key="contact">Contact</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h4 data-key="contactInfo">Contact Info</h4>
                 <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> <span data-key="address">Russia Street 14/4/2, Abovyan</span></p>
+                    <p><i class="fas fa-map-marker-alt"></i> <span data-key="address">Russia Street 14/4/2,
+                            Abovyan</span></p>
                     <p><i class="fas fa-phone"></i> +374 41 44 24 13</p>
                     <p><i class="fas fa-envelope"></i> Angela@glowhouseinfo.com</p>
                 </div>
             </div>
-            
+
             <div class="footer-section">
                 <h4 data-key="followUs">Follow Us</h4>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/glowhouseoff?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-link">
+                    <a href="https://www.instagram.com/glowhouseoff?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        target="_blank" rel="noopener noreferrer" class="social-link">
                         <i class="fab fa-instagram"></i>
                     </a>
                     <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
@@ -381,7 +396,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="copyright-bar">
             <div class="copyright-content">
                 <p data-key="copyright">&copy; 2024 Glow House. All rights reserved.</p>
@@ -397,8 +412,10 @@
     <script src="index.js"></script>
 </body>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    
-    <script src="index.js"></script>
+
+<script src="index.js"></script>
 </body>
+
 </html>
+
 </html>

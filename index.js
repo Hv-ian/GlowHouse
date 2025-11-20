@@ -9,8 +9,63 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeLanguageSwitcher();
     initializeServiceOptions();
     initializeCalendarInteractions();
-    // Removed initializeBookingTabs() - no longer needed
+    initializeHamburgerMenu(); // Add this line
 });
+
+// Hamburger Menu Functionality
+function initializeHamburgerMenu() {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+
+    // Create overlay element
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+
+    function toggleMenu() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        overlay.classList.toggle('active');
+        body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+    }
+
+    // Hamburger click event
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Overlay click event
+    overlay.addEventListener('click', closeMenu);
+
+    // Close menu when clicking on nav links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                closeMenu();
+            }
+        });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+
+    // Close menu on window resize if it becomes desktop size
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+}
 
 // Booking Tabs Functionality
 function initializeBookingTabs() {
@@ -340,20 +395,20 @@ function initializeLanguageSwitcher() {
             booking: "Ամրագրում",
             calendar: "Աշխատանքային Ժամերը",
             contact: "Կապ",
-            address: "Ռուսաստանի փողոց 14/4/2, Աբովյան",
+            address: "Ռուսաստանի փողոց 14/4/2, Քաղաք Աբովյան",
             subtitle: "Գեղեցկության և մաշկի խնամքի սրահ",
             servicesTitle: "Մեր Ծառայությունները",
             makeup: "Դիմահարդարում",
-            makeupDesc: "Պրոֆեսիոնալ դիմահարդարում ցանկացած առիթի համար — հարսանյաց, միջոցառումների, երեկույթների կամ բնական առօրյա գեղեցկության համար: Մեր վարպետները կբարձրացնեն ձեր փայլը ճշգրտությամբ և ստեղծագործականությամբ:",
+            makeupDesc: "Պրոֆեսիոնալ դիմահարդարում ցանկացած առիթի համար — հարսանյաց, միջոցառումների, երեկույթների կամ բնական առօրյա գեղեցկության համար: Մեր մասնագետները ձեզ կապահովեն գերազանց արդյունքով՝ յուրաքանչյուր սանրվածք դարձնելով ձեր ոճին համապատասխան:",
             makeupFeatures: ["Հարսանյաց Դիմահարդարում", "Երեկոյան Գլեմ", "Բնական Տեսք"],
             hairdresser: "վարսահարդարում",
-            hairdresserDesc: "Ժամանակակից կտրվածքներից մինչև վառ գունավորում, ս stylingրում, ոճավորում և ամբողջական փոխակերպումներ: Ձեր մազերը մշակվում են բարձրորակ արտադրանքներով և փորձառու խնամքով:",
+            hairdresserDesc: "Ժամանակակից վարսահարդարումից մինչև վառ գունավորում, ս styling-ում, ոճավորում և ամբողջական փոխակերպումներ: Ձեր մազերը մշակվում են բարձրորակ արտադրանքներով և փորձառու խնամքով:",
             hairdresserFeatures: ["Մազերի Գունավորում", "Ոճավորում", "Երկարացում"],
             nails: "Եղունգներ",
-            nailsDesc: "Gel եղունգներ, եղունգների արվեստ, մանիկյուր և անթերի դիզայն: Ընտրեք փափուկ բնական տեսքից կամ համարձակ ստեղծագործական նախշերից — միշտ կատարված է ճշգրտությամբ:",
+            nailsDesc: "Gel եղունգներ, եղունգների արվեստ, մանիկյուր և անթերի դիզայն: Ընտրեք փափուկ բնական տեսքից կամ համարձակ ստեղծագործական նախշերից — միշտ կատարվում է ճշգրտությամբ:",
             nailsFeatures: ["Gel Մանիկյուր", "Եղունգների Արվեստ", "Spa Բուժում"],
             skincare: "Մաշկի խնամք",
-            skincareDesc: "Շքեղ մաշկի խնամքի պրոցեդուրներ, որոնք խոնավեցնում, հարթեցնում և պայծառացնում են: Կատարելական է սթրեսից ազատվելու և երկարատև ճառագայթման համար:",
+            skincareDesc: "Շքեղ մաշկի խնամքի պրոցեդուրներ, որոնք խոնավեցնում, հարթեցնում և պայծառացնում են: Իդեալական է սթրեսից ազատվելու և երկարատև ճառագայթման բուժման համար:",
             skincareFeatures: ["Դիմադրոշմներ", "Հակա-Տարիքային", "Խոնավացում"],
             sectionTitle:["Ամրագրել"],
             bookingTitle: "Ամրագրել",
@@ -365,7 +420,7 @@ function initializeLanguageSwitcher() {
             
             // CALENDAR TRANSLATIONS - ARMENIAN
             calendarTitle: "Մեր Աշխատանքային Ժամերը",
-            calendarSubtitle: "Երբ մենք այստեղ ենք՝ ձեզ փայլեցնելու համար",
+            calendarSubtitle: "Մենք այստեղ ենք ձեզ փայլեցնելու համար ✨",
             monday: "Երկուշաբթի",
             tuesday: "Երեքշաբթի",
             wednesday: "Չորեքշաբթի", 
@@ -379,7 +434,7 @@ function initializeLanguageSwitcher() {
             thursdayStatus: "Փոխակերպման Օր", 
             fridayStatus: "Շաբաթվա ավարտին պատրաստ",
             saturdayStatus: "Հաճույքի Օր",
-            sundayStatus: "Ինքնաոճավորման Կիրակի",
+            sundayStatus: "Ինքնախնամքի Կիրակի",
             closed: "Փակ է",
             openingHours: "Աշխատանքային Ժամեր:",
             hoursDetail: "Երեքշաբթի - Կիրակի: 10:00 - 19:00",
