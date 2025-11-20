@@ -60,13 +60,13 @@
                 <i class="fas fa-map-marker-alt"></i>
                 <span>Russia Street 14/4/2, Abovyan</span>
             </a>
-            <div class="hero-subtitle"> Armenian Beauty & Skincare Studio</div>
         </div>
 
         <div class="scroll-indicator">
             <div class="scroll-arrow"></div>
         </div>
     </header>
+    <div class="hero-subtitle"> Armenian Beauty & Skincare Studio</div>
 
     <!-- SERVICES -->
     <section id="services" class="section">
@@ -104,7 +104,7 @@
 
         <!-- Nails -->
         <div class="service-row">
-            <img src="images/pic5.png" class="service-img">
+            <img src="images/pic17.jpeg" class="service-img">
             <div class="service-text">
                 <h3>Nails</h3>
                 <p>Gel nails, nail art, manicures, and flawless designs. Choose from soft natural looks or bold creative
@@ -318,7 +318,8 @@
     <section id="contact" class="section">
         <h2 class="section-title" data-key="contactTitle">Contact</h2>
         <div class="contact-options">
-            <div class="contact-card">
+            <!-- Email Card - Now clickable -->
+            <div class="contact-card clickable-contact" data-type="email" data-value="Angela@glowhouseinfo.com">
                 <div class="contact-icon">
                     <i class="fas fa-envelope"></i>
                 </div>
@@ -326,12 +327,13 @@
                 <p>Angela@glowhouseinfo.com</p>
             </div>
 
-            <div class="contact-card">
+            <!-- Phone Card - Now clickable -->
+            <div class="contact-card clickable-contact" data-type="phone" data-value="+37441442413">
                 <div class="contact-icon">
                     <i class="fas fa-phone"></i>
                 </div>
                 <h3 data-key="phone">Phone</h3>
-                <p>+374 41 44 24 13</p>
+                <p>+37441442413</p>
             </div>
 
             <div class="contact-card">
@@ -414,8 +416,18 @@
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 <script src="index.js"></script>
-</body>
-
-</html>
+<script>
+    // Simple Calendly event listener - this just forwards to the function in index.js
+    document.addEventListener('DOMContentLoaded', function () {
+        window.addEventListener('message', function (event) {
+            if (event.data.event === 'calendly.event_scheduled') {
+                console.log('Calendly appointment scheduled✅');
+                if (typeof showBookingSuccessPopup === 'function') {
+                    showBookingSuccessPopup();
+                }
+            }
+        });
+    });
+</script>
 
 </html>
