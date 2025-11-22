@@ -25,17 +25,17 @@ const translations = {
         skincareDesc: "Luxurious skincare treatments that hydrate, smooth, and brighten. Perfect for stress relief and lasting radiance.",
         skincareFeatures: ["Facials", "Anti-Aging", "Hydration"],
         bookingTitle: "Book Your Appointment",
-        bookingSubtitle: "Choose a service and select your preferred time",
+        bookingSubtitle: "Select your service and procedure to see available times",
         bookMakeup: "Book Makeup",
         bookHair: "Book Hair",
         bookNails: "Book Nails",
         bookSkincare: "Book Skincare",
-        
+
         // CALENDAR TRANSLATIONS
         calendarTitle: "Our Beauty Hours",
         calendarSubtitle: "When we're here to make you glow",
         monday: "Monday",
-        tuesday: "Tuesday", 
+        tuesday: "Tuesday",
         wednesday: "Wednesday",
         thursday: "Thursday",
         friday: "Friday",
@@ -43,7 +43,7 @@ const translations = {
         sunday: "Sunday",
         mondayStatus: "Beauty Rest Day",
         tuesdayStatus: "Ready to Glow",
-        wednesdayStatus: "Midweek Magic", 
+        wednesdayStatus: "Midweek Magic",
         thursdayStatus: "Transformation Day",
         fridayStatus: "Weekend Ready",
         saturdayStatus: "Pampering Day",
@@ -55,11 +55,11 @@ const translations = {
         // CONTACT TRANSLATIONS
         contactTitle: "Contact us",
         email: "Email",
-        phone: "Phone", 
+        phone: "Phone",
         hoursTitle: "Hours",
         hours: "Tue-Sun: 10:00 - 19:00",
         instagram: "Instagram",
-        
+
         // FOOTER TRANSLATIONS
         footerTagline: "Armenian Beauty & Skincare Studio",
         quickLinks: "Quick Links",
@@ -72,6 +72,22 @@ const translations = {
         cookies: "Cookie Policy",
         bookingConfirmed: "Booking Confirmed ✅",
         thankYouMessage: "Thank you for booking with Glow House. We can't wait to make you glow!",
+
+        // NEW BOOKING TRANSLATIONS
+        chooseService: "Choose Service Category",
+        chooseProcedure: "Choose Procedure",
+        selectServiceCategory: "Select a service category",
+        selectProcedure: "Select a procedure",
+        selectServiceFirst: "Please select a service category first",
+        selectServiceProcedure: "Select Service & Procedure",
+        selectToViewTimes: "Choose from our services and procedures to view available booking times",
+        makeupSubtitle: "Professional makeup services",
+        hairSubtitle: "Styling & haircare",
+        nailsSubtitle: "Manicure & pedicure",
+        skincareSubtitle: "Cosmetology treatments",
+        bookNow: "Book Now",
+        noProcedures: "No procedures available for this service",
+        duration: "Duration"
     },
     hy: {
         home: "Գլխավոր",
@@ -100,13 +116,13 @@ const translations = {
         bookHair: "Վարսահարդարում",
         bookNails: "Մատնահարդարում",
         bookSkincare: "Մաշկի խնամք",
-        
+
         // CALENDAR TRANSLATIONS - ARMENIAN
         calendarTitle: "Մեր Աշխատանքային Ժամերը",
         calendarSubtitle: "Մենք այստեղ ենք ձեզ սիրով սպասարկելու համար ✨",
         monday: "Երկուշաբթի",
         tuesday: "Երեքշաբթի",
-        wednesday: "Չորեքշաբթի", 
+        wednesday: "Չորեքշաբթի",
         thursday: "Հինգշաբթի",
         friday: "Ուրբաթ",
         saturday: "Շաբաթ",
@@ -114,7 +130,7 @@ const translations = {
         mondayStatus: "Հանգստյան Օր",
         tuesdayStatus: "Պատրաստ Փայլելու",
         wednesdayStatus: "Շաբաթվա Կեսի Կախարդանք",
-        thursdayStatus: "Փոխակերպման Օր", 
+        thursdayStatus: "Փոխակերպման Օր",
         fridayStatus: "Շաբաթվա ավարտին պատրաստ",
         saturdayStatus: "Առիթներին պատրաստ",
         sundayStatus: "Ինքնախնամքի Կիրակի",
@@ -129,20 +145,37 @@ const translations = {
         hoursTitle: "Աշխատանքային Ժամեր",
         hours: "Երեք-Կիր: 10:00 - 19:00",
         instagram: "Ինստագրամ",
-        
+
         // FOOTER TRANSLATIONS - ARMENIAN
         footerTagline: "Գեղեցկության և մաշկի խնամքի սրահ",
         quickLinks: "Արագ Հղումներ",
-        contactInfo: "Կոնտակտային Տվյալներ", 
+        contactInfo: "Կոնտակտային Տվյալներ",
         followUs: "Հետևեք Մեզ",
         address: "Ռուսաստանի փողոց 14/4/2, Քաղաք Աբովյան ",
         copyright: "© 2024 Glow House. Բոլոր իրավունքները պաշտպանված են։",
         privacy: "Գաղտնիության Քաղաքականություն",
         terms: "Ծառայության Պայմաններ",
         cookies: "Cookie-ների Քաղաքականություն",
+
         // BOOKING CONFIRMED
         bookingConfirmed: "Ամրագրումը Հաստատված է ✅",
         thankYouMessage: "Շնորհակալություն Glow House-ի հետ ամրագրելու համար:",
+
+        // NEW BOOKING TRANSLATIONS - ARMENIAN
+        chooseService: "Ընտրեք Ծառայության Կատեգորիան",
+        chooseProcedure: "Ընտրեք Ծառայությունը",
+        selectServiceCategory: "Ընտրեք ծառայության կատեգորիա",
+        selectProcedure: "Ընտրեք ծառայությունը",
+        selectServiceFirst: "Խնդրում ենք նախ ընտրել ծառայության կատեգորիա",
+        selectServiceProcedure: "Ընտրեք Ծառայություն և Ծառայություն",
+        selectToViewTimes: "Ընտրեք մեր ծառայություններից և ծառայություններից ժամանակներ դիտելու համար",
+        makeupSubtitle: "Պրոֆեսիոնալ դիմահարդարման ծառայություններ",
+        hairSubtitle: "Ոճավորում և մազերի խնամք",
+        nailsSubtitle: "Մատնահարդարում և ոտնահարդարում",
+        skincareSubtitle: "Կոսմետոլոգիայի բուժումներ",
+        bookNow: "Ամրագրել Հիմա",
+        noProcedures: "Այս ծառայության համար ծառայություններ չկան",
+        duration: "Տևողություն"
     },
     ru: {
         home: "Главная",
@@ -171,14 +204,14 @@ const translations = {
         bookHair: "Записаться к Парикмахеру",
         bookNails: "Записаться на Ногти",
         bookSkincare: "Записаться на Уход за кожей",
-        
+
         // CALENDAR TRANSLATIONS - RUSSIAN
         calendarTitle: "Наши Часы Работы",
         calendarSubtitle: "Когда мы здесь, чтобы сделать вас сияющими",
         monday: "Понедельник",
         tuesday: "Вторник",
         wednesday: "Среда",
-        thursday: "Четверг", 
+        thursday: "Четверг",
         friday: "Пятница",
         saturday: "Суббота",
         sunday: "Воскресенье",
@@ -186,24 +219,25 @@ const translations = {
         tuesdayStatus: "Готовы Сиять",
         wednesdayStatus: "Магия Середины Недели",
         thursdayStatus: "День Преображения",
-        fridayStatus: "Готовы к Выходным", 
+        fridayStatus: "Готовы к Выходным",
         saturdayStatus: "День Ухода",
         sundayStatus: "Воскресенье Самоухода",
         closed: "Закрыто",
         openingHours: "Часы Работы:",
         hoursDetail: "Вторник - Воскресенье: 10:00 - 19:00",
         bookSession: "Забронировать Сеанс",
+
         // CONTACT TRANSLATIONS - RUSSIAN
         contactTitle: "Контакты",
         email: "Эл. Почта",
         phone: "Телефон",
         hoursTitle: "Часы",
-        hours: "Вт-Вс: 10:00 - 19:00", 
+        hours: "Вт-Вс: 10:00 - 19:00",
         instagram: "Инстаграм",
 
         bookingConfirmed: "Бронирование Подтверждено ✅",
         thankYouMessage: "Спасибо за бронирование в Glow House. Мы не можем дождаться, чтобы сделать вас сияющими!",
-        
+
         // FOOTER TRANSLATIONS - RUSSIAN
         footerTagline: "Студи красоты и ухода за кожей",
         quickLinks: "Быстрые Ссылки",
@@ -213,12 +247,116 @@ const translations = {
         copyright: "© 2024 Glow House. Все права защищены.",
         privacy: "Политика Конфиденциальности",
         terms: "Условия Обслуживания",
-        cookies: "Политика Cookie"
+        cookies: "Политика Cookie",
+
+        // NEW BOOKING TRANSLATIONS - RUSSIAN
+        chooseService: "Выберите Категорию Услуги",
+        chooseProcedure: "Выберите Процедуру",
+        selectServiceCategory: "Выберите категорию услуги",
+        selectProcedure: "Выберите процедуру",
+        selectServiceFirst: "Пожалуйста, сначала выберите категорию услуги",
+        selectServiceProcedure: "Выберите Услугу и Процедуру",
+        selectToViewTimes: "Выберите из наших услуг и процедур для просмотра доступного времени",
+        makeupSubtitle: "Профессиональные услуги макияжа",
+        hairSubtitle: "Укладка и уход за волосами",
+        nailsSubtitle: "Маникюр и педикюр",
+        skincareSubtitle: "Косметологические процедуры",
+        bookNow: "Забронировать Сейчас",
+        noProcedures: "Для этой услуги нет доступных процедур",
+        duration: "Продолжительность"
+    }
+};
+
+// Procedure translations with Russian included
+const procedureTranslations = {
+    hy: {
+        makeup: [
+            { name: "առօրյա դիմահարդարում առանց թարթիչ", price: "6,000 AMD", duration: "45 րոպե" },
+            { name: "երեկոյան դիմահարդարում", price: "8,000 AMD", duration: "60-120 րոպե" },
+            { name: "հարսանյաց դիմահարդարում", price: "13,000 AMD", duration: "90 րոպե" },
+            { name: "դեկոլտեի մշակում", price: "+1,000 AMD", duration: "15 րոպե" },
+            { name: "թարթիչ հատիկավոր և ընդհանուր", price: "3,000 AMD", duration: "20 րոպե" },
+            { name: "Հոնքերի շտկում", price: "2,000 AMD", duration: "15 րոպե" },
+            { name: "Ասեղային մազահեռացում (1ժամ)", price: "4,000 AMD", duration: "60 րոպե" }
+        ],
+        hair: [
+            { name: "կտրվածք", price: "1,500–3,000 AMD", duration: "30 րոպե" },
+            { name: "ֆեն", price: "1,500–5,000 AMD", duration: "45 րոպե" },
+            { name: "խառը ֆեն (ստորակետ)", price: "2,000–5,000 AMD", duration: "60 րոպե" },
+            { name: "Շիպցիներ", price: "3,000–8,000 AMD", duration: "60 րոպե" },
+            { name: "Ներկ", price: "1,500–2,000 AMD", duration: "45 րոպե" },
+            { name: "Գունաբացում", price: "15,000 AMD", duration: "90 րոպե" },
+            { name: "կերատին", price: "15,000 AMD", duration: "90 րոպե" },
+            { name: "սանրվածք(պոչ)", price: "4,000–8,000 AMD", duration: "60 րոպե" },
+            { name: "հարսանեկան սանրվածքներ", price: "10,000 AMD", duration: "90 րոպե" }
+        ],
+        nails: [
+            { name: "Գելլաք", price: "5,000 AMD", duration: "60 րոպե" },
+            { name: "Մատնահարդարում չիստկա", price: "2,000 AMD", duration: "45 րոպե" },
+            { name: "Ճապոնական խնամք (15րոպե)", price: "3,000 AMD", duration: "15 րոպե" },
+            { name: "Հեռացում", price: "1,000 AMD", duration: "15 րոպե" },
+            { name: "գելով ամրեցում", price: "6,000 AMD", duration: "75 րոպե" },
+            { name: "Լիցք (Եղունգի երկարացում)", price: "1,000 AMD", duration: "30 րոպե" },
+            { name: "ֆրենչ + դիզայն", price: "+1,000 AMD", duration: "+15 րոպե" },
+            { name: "Բազայով հարթեցում + ֆրենչ", price: "6,000 AMD", duration: "75 րոպե" },
+            { name: "գելով ամրեցում + ֆրենչ", price: "7,000 AMD", duration: "90 րոպե" },
+            { name: "Ոտնահարդարում", price: "7,000 AMD", duration: "60 րոպե" },
+            { name: "Կրունկներ + գելլաք", price: "10,000 AMD", duration: "90 րոպե" }
+        ],
+        skincare: [
+            { name: "կոմբինացված մաշկի մաքրում (2ժամ)", price: "15,000 AMD", duration: "120 րոպե" },
+            { name: "Յուղոտ մաշկի մաքրում (2ժամ)", price: "15,000 AMD", duration: "120 րոպե" },
+            { name: "Չոր մաշկի խնամք (2ժամ)", price: "15,000 AMD", duration: "120 րոպե" },
+            { name: "Դասական մերսում+դիմակ (30րոպե)", price: "10,000 AMD", duration: "30 րոպե" },
+            { name: "Բուսական պիլինգ + չիստկա (2ժամ)", price: "15,000 AMD", duration: "120 րոպե" }
+        ]
+    },
+    ru: {
+        makeup: [
+            { name: "Повседневный макияж без ресниц", price: "6,000 AMD", duration: "45 мин" },
+            { name: "Вечерний макияж", price: "8,000 AMD", duration: "60-120 мин" },
+            { name: "Свадебный макияж", price: "13,000 AMD", duration: "90 мин" },
+            { name: "Обработка зоны декольте", price: "+1,000 AMD", duration: "15 мин" },
+            { name: "Грануляция ресниц и общая", price: "3,000 AMD", duration: "20 мин" },
+            { name: "Коррекция бровей", price: "2,000 AMD", duration: "15 мин" },
+            { name: "Удаление волос иглой (1 час)", price: "4,000 AMD", duration: "60 мин" }
+        ],
+        hair: [
+            { name: "Стрижка", price: "1,500–3,000 AMD", duration: "30 мин" },
+            { name: "Укладка феном", price: "1,500–5,000 AMD", duration: "45 мин" },
+            { name: "Смешанная укладка феном", price: "2,000–5,000 AMD", duration: "60 мин" },
+            { name: "Чипсы", price: "3,000–8,000 AMD", duration: "60 мин" },
+            { name: "Окрашивание", price: "1,500–2,000 AMD", duration: "45 мин" },
+            { name: "Обесцвечивание цвета", price: "15,000 AMD", duration: "90 мин" },
+            { name: "Кератин", price: "15,000 AMD", duration: "90 мин" },
+            { name: "Прическа (хвост)", price: "4,000–8,000 AMD", duration: "60 мин" },
+            { name: "Свадебные прически", price: "10,000 AMD", duration: "90 мин" }
+        ],
+        nails: [
+            { name: "Геллак", price: "5,000 AMD", duration: "60 мин" },
+            { name: "Классический маникюр", price: "2,000 AMD", duration: "45 мин" },
+            { name: "Японский уход (15 минут)", price: "3,000 AMD", duration: "15 мин" },
+            { name: "Снятие", price: "1,000 AMD", duration: "15 мин" },
+            { name: "Укрепление гелем", price: "6,000 AMD", duration: "75 мин" },
+            { name: "Зарядка (Наращивание ногтей)", price: "1,000 AMD", duration: "30 мин" },
+            { name: "Френч + дизайн", price: "+1,000 AMD", duration: "+15 мин" },
+            { name: "Базовое сглаживание + френч", price: "6,000 AMD", duration: "75 мин" },
+            { name: "Укрепление гелем + френч", price: "7,000 AMD", duration: "90 мин" },
+            { name: "Педикюр", price: "7,000 AMD", duration: "60 мин" },
+            { name: "Пятки + геллак", price: "10,000 AMD", duration: "90 мин" }
+        ],
+        skincare: [
+            { name: "Комбинированная чистка кожи (2 часа)", price: "15,000 AMD", duration: "120 мин" },
+            { name: "Чистка жирной кожи (2 часа)", price: "15,000 AMD", duration: "120 мин" },
+            { name: "Уход за сухой кожей (2 часа)", price: "15,000 AMD", duration: "120 мин" },
+            { name: "Классический массаж + маска (30 минут)", price: "10,000 AMD", duration: "30 мин" },
+            { name: "Растительный пилинг + чистка (2 часа)", price: "15,000 AMD", duration: "120 мин" }
+        ]
     }
 };
 
 // Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM loaded - initializing with smoother animations...');
     initializeAnimations();
     initializeNavBehavior();
@@ -228,7 +366,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCalendarInteractions();
     initializeHamburgerMenu();
     initializeContactCards();
-    
+    initializeElegantBooking();
+    initializeMobileCalendly()
+
     // Add smooth scroll to all internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -242,6 +382,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Initialize booking translations
+    setTimeout(updateBookingTranslations, 100);
 });
 
 // ULTRA SMOOTH FIREWORK EFFECT
@@ -250,36 +393,36 @@ function createFirework(x, y, colors = ['#d4a798', '#e8c4b8', '#e8b4b4', '#ffd70
     firework.className = 'firework';
     firework.style.left = x + 'px';
     firework.style.top = y + 'px';
-    
+
     const particleCount = 80;
-    
+
     for (let i = 0; i < particleCount; i++) {
         const particle = document.createElement('div');
         particle.className = 'firework-particle';
-        
+
         const angle = Math.random() * Math.PI * 2;
         const distance = 50 + Math.random() * 150;
         const tx = Math.cos(angle) * distance;
         const ty = Math.sin(angle) * distance;
-        
+
         particle.style.setProperty('--tx', tx + 'px');
         particle.style.setProperty('--ty', ty + 'px');
-        
+
         const color = colors[Math.floor(Math.random() * colors.length)];
         particle.style.background = color;
-        
+
         const size = 4 + Math.random() * 8;
         particle.style.width = size + 'px';
         particle.style.height = size + 'px';
-        
+
         const delay = Math.random() * 0.3;
         particle.style.animationDelay = delay + 's';
-        
+
         firework.appendChild(particle);
     }
-    
+
     document.body.appendChild(firework);
-    
+
     // Remove firework after animation
     setTimeout(() => {
         if (firework.parentElement) {
@@ -292,42 +435,42 @@ function createFirework(x, y, colors = ['#d4a798', '#e8c4b8', '#e8b4b4', '#ffd70
 function createStarConfetti(container) {
     const starCount = 60;
     const colors = ['#d4a798', '#e8c4b8', '#e8b4b4', '#ffd700', '#ff6b6b', '#a78a7a', '#f8e8e8', '#ffffff'];
-    
+
     // Create multiple bursts with delays for smoother effect
     createBurst(container, starCount, colors, 0);
-    setTimeout(() => createBurst(container, starCount/2, colors, 200), 150);
-    setTimeout(() => createBurst(container, starCount/3, colors, 400), 300);
+    setTimeout(() => createBurst(container, starCount / 2, colors, 200), 150);
+    setTimeout(() => createBurst(container, starCount / 3, colors, 400), 300);
 }
 
 function createBurst(container, count, colors, delay) {
     for (let i = 0; i < count; i++) {
         const star = document.createElement('div');
         star.className = 'confetti-star';
-        
+
         const startX = 50 + (Math.random() - 0.5) * 20;
         star.style.left = startX + 'vw';
         star.style.top = '50vh';
-        
+
         const color = colors[Math.floor(Math.random() * colors.length)];
         star.style.background = color;
-        
+
         const size = 4 + Math.random() * 8;
         star.style.width = size + 'px';
         star.style.height = size + 'px';
-        
+
         const angle = Math.random() * Math.PI * 2;
         const distance = 40 + Math.random() * 80;
         const endX = startX + Math.cos(angle) * distance;
         const endY = 50 + Math.sin(angle) * distance;
-        
+
         const duration = 1.2 + Math.random() * 1.0;
-        
+
         star.style.animation = `confettiExplosion ${duration}s ease-out ${delay}ms forwards`;
         star.style.setProperty('--end-x', endX + 'vw');
         star.style.setProperty('--end-y', endY + 'vh');
-        
+
         container.appendChild(star);
-        
+
         setTimeout(() => {
             if (star.parentElement) {
                 star.parentElement.removeChild(star);
@@ -340,11 +483,11 @@ function createBurst(container, count, colors, delay) {
 function showBookingSuccessPopup() {
     console.log('Showing booking success popup with fireworks in language:', currentLang);
     const t = translations[currentLang] || translations.en;
-    
+
     // Create confetti container
     const confettiContainer = document.createElement('div');
     confettiContainer.className = 'confetti-container';
-    
+
     // Create popup
     const popup = document.createElement('div');
     popup.className = 'booking-success-popup';
@@ -356,33 +499,33 @@ function showBookingSuccessPopup() {
             <div class="popup-progress"></div>
         </div>
     `;
-    
+
     // Add to page
     document.body.appendChild(confettiContainer);
     document.body.appendChild(popup);
-    
+
     // Create multiple firework bursts around the popup
     setTimeout(() => {
         createFirework(window.innerWidth / 2 - 100, window.innerHeight / 2 - 100);
     }, 100);
-    
+
     setTimeout(() => {
         createFirework(window.innerWidth / 2 + 100, window.innerHeight / 2 - 150);
     }, 300);
-    
+
     setTimeout(() => {
         createFirework(window.innerWidth / 2 - 150, window.innerHeight / 2 + 100);
     }, 500);
-    
+
     // Also add star confetti
     createStarConfetti(confettiContainer);
-    
+
     setTimeout(() => {
         popup.classList.add('active');
-        
+
         const progressBar = popup.querySelector('.popup-progress');
         progressBar.style.animation = 'progressCountdown 3s linear forwards';
-        
+
         setTimeout(() => {
             popup.classList.remove('active');
             setTimeout(() => {
@@ -448,20 +591,20 @@ function initializeHamburgerMenu() {
 // Calendar interactions
 function initializeCalendarInteractions() {
     const calendarDays = document.querySelectorAll('.calendar-day.open');
-    
+
     calendarDays.forEach(day => {
-        day.addEventListener('click', function() {
+        day.addEventListener('click', function () {
             this.style.transform = 'scale(0.95)';
             setTimeout(() => {
                 this.style.transform = '';
             }, 200);
         });
-        
-        day.addEventListener('mouseenter', function() {
+
+        day.addEventListener('mouseenter', function () {
             this.style.zIndex = '10';
         });
-        
-        day.addEventListener('mouseleave', function() {
+
+        day.addEventListener('mouseleave', function () {
             this.style.zIndex = '1';
         });
     });
@@ -483,11 +626,11 @@ function initializeAnimations() {
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver(function(entries) {
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                
+
                 if (entry.target.id === 'services') {
                     const serviceRows = entry.target.querySelectorAll('.service-row');
                     serviceRows.forEach((row, index) => {
@@ -496,7 +639,7 @@ function initializeAnimations() {
                         }, index * 300);
                     });
                 }
-                
+
                 if (entry.target.id === 'calendar') {
                     const calendarDays = entry.target.querySelectorAll('.calendar-day');
                     calendarDays.forEach((day, index) => {
@@ -504,7 +647,7 @@ function initializeAnimations() {
                             day.style.opacity = '0';
                             day.style.transform = 'translateY(30px)';
                             day.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                            
+
                             setTimeout(() => {
                                 day.style.opacity = '1';
                                 day.style.transform = 'translateY(0)';
@@ -512,23 +655,15 @@ function initializeAnimations() {
                         }, index * 150);
                     });
                 }
-                
+
                 if (entry.target.id === 'booking') {
-                    const bookingCards = entry.target.querySelectorAll('.booking-card-compact');
-                    bookingCards.forEach((card, index) => {
-                        setTimeout(() => {
-                            card.style.opacity = '0';
-                            card.style.transform = 'translateY(20px) scale(0.95)';
-                            card.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-                            
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0) scale(1)';
-                            }, 100);
-                        }, index * 150);
-                    });
+                    const bookingSection = entry.target;
+                    setTimeout(() => {
+                        bookingSection.style.opacity = '1';
+                        bookingSection.style.transform = 'translateY(0)';
+                    }, 100);
                 }
-                
+
                 if (entry.target.classList.contains('copyright-footer')) {
                     entry.target.classList.add('visible');
                 }
@@ -567,17 +702,17 @@ function initializeNavBehavior() {
 // Service options
 function initializeServiceOptions() {
     const serviceOptions = document.querySelectorAll('.service-option');
-    
+
     serviceOptions.forEach(option => {
-        option.addEventListener('mouseenter', function() {
+        option.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-8px)';
         });
-        
-        option.addEventListener('mouseleave', function() {
+
+        option.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0)';
         });
-        
-        option.addEventListener('click', function(e) {
+
+        option.addEventListener('click', function (e) {
             if (!e.target.classList.contains('book-btn') && !e.target.closest('.book-btn')) {
                 const link = this.querySelector('.book-btn');
                 if (link && link.href) {
@@ -599,7 +734,7 @@ function initializeLanguageSwitcher() {
     function translatePage(lang) {
         const t = translations[lang];
         if (!t) return;
-        
+
         document.querySelectorAll('[data-key]').forEach(element => {
             const key = element.dataset.key;
             if (t[key]) {
@@ -618,21 +753,21 @@ function initializeLanguageSwitcher() {
         const serviceTitles = document.querySelectorAll('.service-text h3');
         const serviceDescriptions = document.querySelectorAll('.service-text p');
         const serviceFeatures = document.querySelectorAll('.service-features');
-        
+
         if (serviceTitles.length >= 4) {
             serviceTitles[0].textContent = t.makeup;
             serviceTitles[1].textContent = t.hairdresser;
             serviceTitles[2].textContent = t.nails;
             serviceTitles[3].textContent = t.skincare;
         }
-        
+
         if (serviceDescriptions.length >= 4) {
             serviceDescriptions[0].textContent = t.makeupDesc;
             serviceDescriptions[1].textContent = t.hairdresserDesc;
             serviceDescriptions[2].textContent = t.nailsDesc;
             serviceDescriptions[3].textContent = t.skincareDesc;
         }
-        
+
         if (serviceFeatures.length >= 4 && t.makeupFeatures) {
             serviceFeatures[0].innerHTML = t.makeupFeatures.map(feature => `<span>${feature}</span>`).join('');
             serviceFeatures[1].innerHTML = t.hairdresserFeatures.map(feature => `<span>${feature}</span>`).join('');
@@ -643,10 +778,10 @@ function initializeLanguageSwitcher() {
         const bookingTitle = document.querySelector('#booking .section-title');
         const bookingSubtitle = document.querySelector('.booking-subtitle');
         const bookButtons = document.querySelectorAll('.book-btn');
-        
+
         if (bookingTitle && t.bookingTitle) bookingTitle.textContent = t.bookingTitle;
         if (bookingSubtitle && t.bookingSubtitle) bookingSubtitle.textContent = t.bookingSubtitle;
-        
+
         if (bookButtons.length >= 4 && t.bookMakeup) {
             bookButtons[0].textContent = t.bookMakeup;
             bookButtons[1].textContent = t.bookHair;
@@ -662,10 +797,13 @@ function initializeLanguageSwitcher() {
             contactCards[1].textContent = t.phone;
             contactCards[2].textContent = t.hours;
         }
+
+        // Update booking translations
+        updateBookingTranslations();
     }
 
     document.querySelectorAll('.flag').forEach(flag => {
-        flag.addEventListener('click', function() {
+        flag.addEventListener('click', function () {
             const lang = this.dataset.lang;
             currentLang = lang;
             localStorage.setItem('selectedLang', lang);
@@ -681,13 +819,13 @@ function initializeLanguageSwitcher() {
 // Contact card click functionality
 function initializeContactCards() {
     const contactCards = document.querySelectorAll('.clickable-contact');
-    
+
     contactCards.forEach(card => {
-        card.addEventListener('click', function() {
+        card.addEventListener('click', function () {
             const type = this.dataset.type;
             const value = this.dataset.value;
-            
-            switch(type) {
+
+            switch (type) {
                 case 'phone':
                     initiatePhoneCall(value);
                     break;
@@ -695,7 +833,7 @@ function initializeContactCards() {
                     openEmailClient(value);
                     break;
             }
-            
+
             // Add click feedback animation
             this.style.transform = 'scale(0.95)';
             setTimeout(() => {
@@ -709,19 +847,19 @@ function initializeContactCards() {
 function initiatePhoneCall(phoneNumber) {
     // Clean the phone number (remove spaces, dashes, etc.)
     const cleanNumber = phoneNumber.replace(/\s+/g, '');
-    
+
     // Create tel: link
     const telLink = `tel:${cleanNumber}`;
-    
+
     // Try to initiate call
     window.location.href = telLink;
-    
+
     // Fallback for devices that don't support tel: links
     setTimeout(() => {
         if (!document.hidden) {
             // Show a message with the phone number
-            showNotification(`Call: ${phoneNumber}`, 'info');
-            
+            console.log(`Call: ${phoneNumber}`);
+
             // Optional: Copy to clipboard
             navigator.clipboard.writeText(phoneNumber).then(() => {
                 console.log('Phone number copied to clipboard');
@@ -734,16 +872,16 @@ function initiatePhoneCall(phoneNumber) {
 function openEmailClient(emailAddress) {
     const subject = "Appointment Inquiry - Glow House";
     const body = "Hello Glow House team,\n\nI would like to book an appointment or get more information about your services.\n\nBest regards,";
-    
+
     const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
+
     window.location.href = mailtoLink;
-    
+
     // Fallback if mailto doesn't work
     setTimeout(() => {
         if (!document.hidden) {
-            showNotification(`Email: ${emailAddress}`, 'info');
-            
+            console.log(`Email: ${emailAddress}`);
+
             // Optional: Copy to clipboard
             navigator.clipboard.writeText(emailAddress).then(() => {
                 console.log('Email copied to clipboard');
@@ -752,10 +890,302 @@ function openEmailClient(emailAddress) {
     }, 1000);
 }
 
+// Elegant Booking Functionality
+function initializeElegantBooking() {
+    const serviceProcedures = {
+        makeup: [
+            { name: "Everyday makeup without lashes", price: "6,000 AMD", duration: "45 min", url: "https://calendly.com/glowhouseinfo/makeup?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Evening makeup", price: "8,000 AMD", duration: "60-120 min", url: "https://calendly.com/glowhouseinfo/makeup?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Bridal makeup", price: "13,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/makeup?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Décolleté treatment", price: "+1,000 AMD", duration: "15 min", url: "https://calendly.com/glowhouseinfo/makeup?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Lash granulation & general", price: "3,000 AMD", duration: "20 min", url: "https://calendly.com/glowhouseinfo/makeup?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Eyebrow shaping", price: "2,000 AMD", duration: "15 min", url: "https://calendly.com/glowhouseinfo/makeup?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Needle hair removal (1 hour)", price: "4,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/makeup?hide_event_type_details=1&hide_gdpr_banner=1" }
+        ],
+        hair: [
+            { name: "Haircut", price: "1,500-3,000 AMD", duration: "30 min", url: "https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Blow-dry", price: "1,500-5,000 AMD", duration: "45 min", url: "https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Mixed blow-dry (comma)", price: "2,000-5,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Chips", price: "3,000-8,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Coloring", price: "1,500-2,000 AMD", duration: "45 min", url: "https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Color bleaching", price: "15,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Keratin", price: "15,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Hairstyle (ponytail)", price: "4,000-8,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Bridal hairstyles", price: "10,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1" }
+        ],
+        nails: [
+            { name: "Gellac", price: "5,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Classic manicure", price: "2,000 AMD", duration: "45 min", url: "https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Japanese care (15 minutes)", price: "3,000 AMD", duration: "15 min", url: "https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Removal", price: "1,000 AMD", duration: "15 min", url: "https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Gel strengthening", price: "6,000 AMD", duration: "75 min", url: "https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Charge (Nail extension)", price: "1,000 AMD", duration: "30 min", url: "https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "French + design", price: "+1,000 AMD", duration: "+15 min", url: "https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Base smoothing + French", price: "6,000 AMD", duration: "75 min", url: "https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Gel strengthening + French", price: "7,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Pedicure", price: "7,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Heels + gellac", price: "10,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1" }
+        ],
+        skincare: [
+            { name: "Combined skin cleaning (2 hours)", price: "15,000 AMD", duration: "120 min", url: "https://calendly.com/glowhouseinfo/skincare?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Oily skin cleaning (2 hours)", price: "15,000 AMD", duration: "120 min", url: "https://calendly.com/glowhouseinfo/skincare?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Dry skin care (2 hours)", price: "15,000 AMD", duration: "120 min", url: "https://calendly.com/glowhouseinfo/skincare?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Classic massage + mask (30 minutes)", price: "10,000 AMD", duration: "30 min", url: "https://calendly.com/glowhouseinfo/skincare?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Plant peeling + cleaning (2 hours)", price: "15,000 AMD", duration: "120 min", url: "https://calendly.com/glowhouseinfo/skincare?hide_event_type_details=1&hide_gdpr_banner=1" }
+        ]
+    };
+
+    let selectedCategory = null;
+    let selectedProcedure = null;
+
+    // Initialize dropdowns
+    const serviceDropdown = document.getElementById('serviceCategoryDropdown');
+    const procedureDropdown = document.getElementById('procedureDropdown');
+    const procedureOptions = document.getElementById('procedureOptions');
+    const selectedProcedureInfo = document.getElementById('selectedProcedureInfo');
+    const bookNowBtn = document.getElementById('bookNowBtn');
+    const calendarPlaceholder = document.getElementById('calendarPlaceholder');
+    const calendlyWidget = document.getElementById('calendlyWidget');
+
+    // Toggle dropdowns
+    function toggleDropdown(dropdown) {
+        const isActive = dropdown.classList.contains('active');
+
+        // Close all dropdowns first
+        document.querySelectorAll('.custom-dropdown').forEach(dd => {
+            dd.classList.remove('active');
+        });
+
+        // Toggle current dropdown if it wasn't active
+        if (!isActive) {
+            dropdown.classList.add('active');
+        }
+    }
+
+    // Service category selection
+    serviceDropdown.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggleDropdown(this);
+    });
+
+    // Procedure selection
+    procedureDropdown.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (selectedCategory) {
+            toggleDropdown(this);
+        }
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function () {
+        document.querySelectorAll('.custom-dropdown').forEach(dd => {
+            dd.classList.remove('active');
+        });
+    });
+
+    // Service category selection
+    document.querySelectorAll('#serviceCategoryDropdown .dropdown-option').forEach(option => {
+        option.addEventListener('click', function (e) {
+            e.stopPropagation();
+
+            const category = this.dataset.category;
+            selectedCategory = category;
+
+            // Update service dropdown display
+            const serviceName = this.querySelector('.option-title').textContent;
+            serviceDropdown.querySelector('.dropdown-placeholder').textContent = serviceName;
+
+            // Update active state
+            document.querySelectorAll('#serviceCategoryDropdown .dropdown-option').forEach(opt => {
+                opt.classList.remove('active');
+            });
+            this.classList.add('active');
+
+            // Populate procedures
+            populateProcedures(category);
+
+            // Reset procedure selection
+            selectedProcedure = null;
+            procedureDropdown.querySelector('.dropdown-placeholder').textContent = translations[currentLang].selectProcedure;
+            selectedProcedureInfo.classList.remove('active');
+            selectedProcedureInfo.querySelector('#selectedProcedureName').textContent = 'No procedure selected';
+            selectedProcedureInfo.querySelector('#selectedProcedurePrice').textContent = '-';
+            selectedProcedureInfo.querySelector('#selectedProcedureDuration').textContent = 'Select a procedure to see details';
+            bookNowBtn.disabled = true;
+
+            // Hide calendar
+            calendlyWidget.classList.remove('active');
+
+            // Close dropdown
+            serviceDropdown.classList.remove('active');
+        });
+    });
+
+    // Populate procedures based on selected category
+    function populateProcedures(category) {
+        const procedures = serviceProcedures[category] || [];
+        const translatedProcedures = procedureTranslations[currentLang]?.[category] || procedures;
+        const t = translations[currentLang] || translations.en;
+
+        procedureOptions.innerHTML = '';
+
+        if (procedures.length === 0) {
+            procedureOptions.innerHTML = `
+            <div class="no-procedures">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>${t.noProcedures || 'No procedures available for this service'}</p>
+            </div>
+        `;
+            return;
+        }
+
+        procedures.forEach((procedure, index) => {
+            const translatedProcedure = translatedProcedures[index] || procedure;
+            const option = document.createElement('div');
+            option.className = 'procedure-option';
+            option.innerHTML = `
+            <span class="procedure-name">${translatedProcedure.name}</span>
+            <span class="procedure-price">${translatedProcedure.price}</span>
+        `;
+
+            option.addEventListener('click', function (e) {
+                e.stopPropagation();
+
+                // Update active state
+                document.querySelectorAll('#procedureDropdown .procedure-option').forEach(opt => {
+                    opt.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                // Update procedure selection
+                selectedProcedure = procedure;
+                procedureDropdown.querySelector('.dropdown-placeholder').textContent = translatedProcedure.name;
+
+                // Update selected procedure info
+                selectedProcedureInfo.classList.add('active');
+                selectedProcedureInfo.querySelector('#selectedProcedureName').textContent = translatedProcedure.name;
+                selectedProcedureInfo.querySelector('#selectedProcedurePrice').textContent = translatedProcedure.price;
+                selectedProcedureInfo.querySelector('#selectedProcedureDuration').textContent = `${t.duration || 'Duration'}: ${translatedProcedure.duration}`;
+
+                // Enable book now button
+                bookNowBtn.disabled = false;
+
+                // Load calendar
+                loadCalendlyWidget(procedure.url);
+
+                // Close dropdown
+                procedureDropdown.classList.remove('active');
+            });
+
+            procedureOptions.appendChild(option);
+        });
+    }
+
+    // Book Now button
+    bookNowBtn.addEventListener('click', function () {
+        if (selectedProcedure && !this.disabled) {
+            // The calendar is already loaded, just ensure it's visible
+            calendlyWidget.classList.add('active');
+            calendarPlaceholder.style.display = 'none';
+
+            // Scroll to calendar
+            calendlyWidget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    });
+
+    // Load Calendly widget
+    function loadCalendlyWidget(url) {
+        calendlyWidget.innerHTML = '';
+        calendlyWidget.classList.remove('active');
+        calendarPlaceholder.style.display = 'none';
+
+        setTimeout(() => {
+            calendlyWidget.innerHTML = `
+                <div class="calendly-inline-widget" 
+                     data-url="${url}" 
+                     style="min-width:320px;height:600px;">
+                </div>
+            `;
+
+            if (window.Calendly) {
+                window.Calendly.initInlineWidget({
+                    url: url,
+                    parentElement: calendlyWidget.querySelector('.calendly-inline-widget')
+                });
+            }
+
+            setTimeout(() => {
+                calendlyWidget.classList.add('active');
+                calendarPlaceholder.style.display = 'none';
+            }, 300);
+
+        }, 500);
+    }
+}
+
+// Update booking translations when language changes
+function updateBookingTranslations() {
+    const t = translations[currentLang] || translations.en;
+
+    // Update all elements with data-key attributes in booking section
+    const bookingSection = document.getElementById('booking');
+    if (bookingSection) {
+        bookingSection.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.dataset.key;
+            if (t[key]) {
+                // For dropdown placeholders, only update if no selection is made
+                if (element.classList.contains('dropdown-placeholder')) {
+                    const dropdown = element.closest('.custom-dropdown');
+                    const hasSelection = dropdown.querySelector('.dropdown-option.active') ||
+                        dropdown.querySelector('.procedure-option.active');
+                    if (!hasSelection) {
+                        element.textContent = t[key];
+                    }
+                } else {
+                    element.textContent = t[key];
+                }
+            }
+        });
+    }
+
+    // Update service subtitles
+    document.querySelectorAll('.option-subtitle').forEach((subtitle, index) => {
+        const subtitles = [t.makeupSubtitle, t.hairSubtitle, t.nailsSubtitle, t.skincareSubtitle];
+        if (subtitles[index]) {
+            subtitle.textContent = subtitles[index];
+        }
+    });
+
+    // Update book now button
+    const bookNowBtn = document.getElementById('bookNowBtn');
+    if (bookNowBtn) {
+        const buttonText = bookNowBtn.querySelector('span[data-key="bookNow"]');
+        if (buttonText && t.bookNow) {
+            buttonText.textContent = t.bookNow;
+        }
+    }
+}
+
+function initializeMobileCalendly() {
+    // Re-initialize Calendly widgets on mobile for better responsiveness
+    if (window.innerWidth <= 768 && window.Calendly) {
+        document.querySelectorAll('.calendly-inline-widget').forEach(widget => {
+            const url = widget.getAttribute('data-url');
+            if (url) {
+                // Re-init with mobile-optimized settings
+                window.Calendly.initInlineWidget({
+                    url: url,
+                    parentElement: widget,
+                    responsive: true
+                });
+            }
+        });
+    }
+}
 
 // Add CSS for new animations
 const style = document.createElement('style');
-style.textContent =`
+style.textContent = `
     @keyframes slideInRight {
         from { transform: translateX(100%); opacity: 0; }
         to { transform: translateX(0); opacity: 1; }

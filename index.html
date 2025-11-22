@@ -39,7 +39,6 @@
             <li><a href="#booking" data-key="booking">Book Appointment</a></li>
             <li><a href="#calendar" data-key="calendar">Calendar</a></li>
             <li><a href="#contact" data-key="contact">Contact</a></li>
-            <!-- REMOVED language-switcher from here -->
         </ul>
     </nav>
 
@@ -59,6 +58,12 @@
             <a href="https://maps.app.goo.gl/rBMeqQLyKdimYjbw9" target="_blank" class="hero-address clickable-address">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>Russia Street 14/4/2, Abovyan</span>
+                <!-- NEW ELEGANT BOOKING BUTTON -->
+            </a>
+            <a href="#booking" class="elegant-booking-btn">
+                <span class="btn-icon">✨</span>
+                <span class="btn-text" data-key="bookNow">Book Your Appointment</span>
+                <span class="btn-arrow">↓</span>
             </a>
         </div>
 
@@ -133,72 +138,121 @@
         </div>
     </section>
 
-    <!-- BOOKING -->
+    <!-- ELEGANT BOOKING SECTION -->
     <section id="booking" class="section">
-        <div class="booking-background" style="background-image: url('images/pic12.jpeg')"></div>
-
         <div class="booking-content">
             <div class="booking-header">
                 <h2 class="section-title" data-key="bookingTitle">Book Your Session</h2>
-                <p class="booking-subtitle" data-key="bookingSubtitle">Select a service to see available times</p>
+                <p class="booking-subtitle" data-key="bookingSubtitle">Select your service and procedure to see
+                    available times</p>
             </div>
 
-            <div class="booking-grid-compact">
-                <!-- Makeup -->
-                <div class="booking-card-compact">
-                    <div class="card-icon">💄</div>
-                    <h3 data-key="bookMakeup">Makeup</h3>
-                    <div class="calendly-widget-compact">
-                        <div class="calendly-inline-widget"
-                            data-url="https://calendly.com/glowhouseinfo/makeup?hide_event_type_details=1&hide_gdpr_banner=1"
-                            style="min-width:150px;height:300px;">
+            <div class="elegant-booking-container">
+                <!-- Left Side - Service Selection -->
+                <div class="booking-selection-panel">
+                    <!-- Service Category Dropdown -->
+                    <div class="selection-group">
+                        <label class="selection-label">
+                            <i class="fas fa-spa"></i>
+                            <span data-key="chooseService">Choose Service Category</span>
+                        </label>
+                        <div class="custom-dropdown" id="serviceCategoryDropdown">
+                            <div class="dropdown-header">
+                                <span class="dropdown-placeholder">Select a service category</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="dropdown-options">
+                                <div class="dropdown-option" data-category="makeup">
+                                    <div class="option-icon">💄</div>
+                                    <div class="option-info">
+                                        <span class="option-title" data-key="makeup">Makeup</span>
+                                        <span class="option-subtitle" data-key="makeupSubtitle">Professional makeup
+                                            services</span>
+                                    </div>
+                                </div>
+                                <div class="dropdown-option" data-category="hair">
+                                    <div class="option-icon">
+                                        <img src="images/hair.png" alt="Hair" class="custom-icon">
+                                    </div>
+                                    <div class="option-info">
+                                        <span class="option-title" data-key="hairdresser">Hairdresser</span>
+                                        <span class="option-subtitle" data-key="hairSubtitle">Styling & haircare</span>
+                                    </div>
+                                </div>
+                                <div class="dropdown-option" data-category="nails">
+                                    <div class="option-icon">
+                                        <img src="images/nails.gif" alt="Nails" class="custom-icon">
+                                    </div>
+                                    <div class="option-info">
+                                        <span class="option-title" data-key="nails">Nails</span>
+                                        <span class="option-subtitle" data-key="nailsSubtitle">Manicure &
+                                            pedicure</span>
+                                    </div>
+                                </div>
+                                <div class="dropdown-option" data-category="skincare">
+                                    <div class="option-icon">✨</div>
+                                    <div class="option-info">
+                                        <span class="option-title" data-key="skincare">Skincare</span>
+                                        <span class="option-subtitle" data-key="skincareSubtitle">Cosmetology
+                                            treatments</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Procedure Dropdown -->
+                    <div class="selection-group">
+                        <label class="selection-label">
+                            <i class="fas fa-list-alt"></i>
+                            <span data-key="chooseProcedure">Choose Procedure</span>
+                        </label>
+                        <div class="custom-dropdown" id="procedureDropdown">
+                            <div class="dropdown-header">
+                                <span class="dropdown-placeholder">Select a procedure</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="dropdown-options" id="procedureOptions">
+                                <!-- Procedures will be populated dynamically -->
+                                <div class="no-procedures">
+                                    <i class="fas fa-hand-pointer"></i>
+                                    <p>Please select a service category first</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Selected Procedure Info -->
+                    <div class="selected-procedure-info" id="selectedProcedureInfo">
+                        <div class="procedure-details">
+                            <h4 id="selectedProcedureName">No procedure selected</h4>
+                            <div class="procedure-price" id="selectedProcedurePrice">-</div>
+                            <p class="procedure-duration" id="selectedProcedureDuration">Select a procedure to see
+                                details</p>
+                        </div>
+                    </div>
+
+                    <!-- Book Now Button -->
+                    <button class="glow-button book-now-btn" id="bookNowBtn" disabled>
+                        <span class="button-icon">📅</span>
+                        <span data-key="bookNow">Book Now</span>
+                    </button>
                 </div>
 
-                <!-- Hair -->
-                <div class="booking-card-compact">
-                    <div class="card-icon">
-                        <img src="images/hair.png" alt="Hair" class="custom-icon">
-                    </div>
-                    <h3 data-key="bookHair">Hair</h3>
-                    <div class="calendly-widget-compact">
-                        <div class="calendly-inline-widget"
-                            data-url="https://calendly.com/glowhouseinfo/30min?hide_event_type_details=1&hide_gdpr_banner=1"
-                            style="min-width:150px;height:300px;">
+                <!-- Right Side - Calendar -->
+                <div class="calendar-widget-container">
+                    <div class="calendar-placeholder" id="calendarPlaceholder">
+                        <div class="placeholder-icon">
+                            <i class="fas fa-calendar-alt"></i>
                         </div>
+                        <h3>Select Service & Procedure</h3>
+                        <p>Choose from our services and procedures to view available booking times</p>
                     </div>
-                </div>
-
-                <!-- Nails -->
-                <div class="booking-card-compact">
-                    <div class="card-icon">
-                        <img src="images/nails.gif" alt="Nails" class="custom-icon">
-                    </div>
-                    <h3 data-key="bookNails">Nails</h3>
-                    <div class="calendly-widget-compact">
-                        <div class="calendly-inline-widget"
-                            data-url="https://calendly.com/glowhouseinfo/nails?hide_event_type_details=1&hide_gdpr_banner=1"
-                            style="min-width:150px;height:300px;">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Skincare -->
-                <div class="booking-card-compact">
-                    <div class="card-icon">✨</div>
-                    <h3 data-key="bookSkincare">Skincare</h3>
-                    <div class="calendly-widget-compact">
-                        <div class="calendly-inline-widget"
-                            data-url="https://calendly.com/glowhouseinfo/skincare?hide_event_type_details=1&hide_gdpr_banner=1"
-                            style="min-width:150px;height:300px;">
-                        </div>
-                    </div>
+                    <div class="calendly-widget" id="calendlyWidget"></div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- CALENDAR -->
     <section id="calendar" class="section">
@@ -285,18 +339,7 @@
                     <div class="day-hours">10:00 - 19:00</div>
                 </div>
             </div>
-            <!-- Monday -->
-            <div class="calendar-day closed" data-day="monday">
-                <div class="day-glow"></div>
-                <div class="day-content">
-                    <div class="day-name" data-key="monday">Monday</div>
-                    <div class="day-icon">🌙</div>
-                    <div class="day-status" data-key="mondayStatus">Beauty Rest Day</div>
-                    <div class="day-hours" data-key="closed">Closed</div>
-                </div>
-            </div>
         </div>
-
 
         <div class="calendar-footer">
             <div class="hours-summary">
@@ -307,7 +350,7 @@
                 </div>
             </div>
 
-            <a href="#booking" target="_blank" class="glow-button">
+            <a href="#booking" class="glow-button">
                 <span class="button-icon">💫</span>
                 <span data-key="bookSession">Book Your Session</span>
             </a>
@@ -410,8 +453,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="index.js"></script>
 </body>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 

@@ -59,10 +59,6 @@ html {
     position: relative;
 }
 
-.glow-logo {
-    text-shadow: 0 0 10px var(--primary-glow), 0 0 25px var(--primary-glow);
-    animation: logoPulse 2s ease-in-out infinite alternate;
-}
 
 @keyframes logoPulse {
     from {
@@ -863,6 +859,15 @@ html {
 .booking-content {
     position: relative;
     z-index: 3;
+    gap: 30px;
+    margin-bottom: 60px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    background: var(--light-pink);
+    padding: 30px 20px;
+    border-radius: 15px;
+    border: 1px solid var(--secondary);
 }
 
 /* Mobile Responsiveness for Booking Tabs */
@@ -1060,7 +1065,7 @@ html {
     border-radius: 15px;
     padding: 25px 20px;
     text-align: center;
-    border: 4px solid rgb(125, 113, 110);
+    border: 4px solid rgba(195, 184, 182, 0.791);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -1100,7 +1105,6 @@ html {
     border: 1px solid var(--secondary);
     background: white;
     transition: all 0.3s ease;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
@@ -1143,7 +1147,7 @@ html {
     
     .calendly-widget-compact .calendly-inline-widget {
         min-width: 250px !important;
-        height: 450px !important;
+
     }
 }
 
@@ -1439,7 +1443,7 @@ html {
 
 .button-icon {
     font-size: 18px;
-    animation: sparkle 2s ease-in-out infinite;
+    animation: sparkle 1s ease-in-out infinite !important;
 }
 
 @keyframes sparkle {
@@ -1933,7 +1937,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.839);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2161,7 +2165,7 @@ html {
 
 .booking-success-popup.active .popup-content::before {
     opacity: 0.6;
-    animation: gentleSparkle 2s ease-in-out;
+    animation: gentleSparkle 8s ease-in-out;
 }
 
 @keyframes gentleSparkle {
@@ -2434,4 +2438,610 @@ html {
     .booking-card-compact {
         transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
     }
+}
+/* ELEGANT BOOKING SECTION STYLES */
+.elegant-booking-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    overflow: visible; /* important */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Left Panel - Selection */
+.booking-selection-panel {
+    background: linear-gradient(135deg, #fefaf6 0%, #f8e8e8 100%);
+    padding: 40px 30px;
+    border-right: 1px solid rgba(212, 167, 152, 0.2);
+    border-radius: 25px;
+}
+
+.selection-group {
+    margin-bottom: 30px;
+}
+
+.selection-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.selection-label i {
+    color: var(--primary);
+    width: 20px;
+    text-align: center;
+}
+
+/* Custom Dropdown Styles */
+.custom-dropdown {
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    border: 2px solid var(--secondary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.custom-dropdown.active {
+    border-color: var(--primary);
+    box-shadow: 0 5px 20px rgba(212, 167, 152, 0.2);
+}
+
+.custom-dropdown.active .dropdown-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    max-height: 400px;
+}
+
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.custom-dropdown.active .dropdown-header {
+    border-radius: 15px 15px 0 0;
+}
+
+.dropdown-placeholder {
+    color: var(--dark-beige);
+    font-weight: 500;
+}
+
+.dropdown-header i {
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.custom-dropdown.active .dropdown-header i {
+    transform: rotate(180deg);
+}
+
+.dropdown-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow-y: auto;
+    z-index: 100;
+    border: 2px solid var(--primary);
+    border-top: none;
+}
+
+.dropdown-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(212, 167, 152, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background: rgba(212, 167, 152, 0.05);
+}
+
+.dropdown-option:last-child {
+    border-bottom: none;
+}
+
+.dropdown-option.active {
+    background: rgba(212, 167, 152, 0.1);
+    border-left: 4px solid var(--primary);
+}
+
+.option-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 167, 152, 0.1);
+    border-radius: 10px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-option:hover .option-icon {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+.option-info {
+    flex: 1;
+    text-align: left;
+}
+
+.option-title {
+    display: block;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.option-subtitle {
+    display: block;
+    font-size: 12px;
+    color: var(--dark-beige);
+}
+
+/* Procedure Options */
+.procedure-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(212, 167, 152, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.procedure-option:hover {
+    background: rgba(212, 167, 152, 0.05);
+}
+
+.procedure-option:last-child {
+    border-bottom: none;
+}
+
+.procedure-option.active {
+    background: rgba(212, 167, 152, 0.1);
+    border-left: 4px solid var(--primary);
+}
+
+.procedure-name {
+    flex: 1;
+    text-align: left;
+    font-weight: 500;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.procedure-price {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 14px;
+    background: rgba(212, 167, 152, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.no-procedures {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--dark-beige);
+}
+
+.no-procedures i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+.no-procedures p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Selected Procedure Info */
+.selected-procedure-info {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    border: 2px solid var(--secondary);
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.selected-procedure-info.active {
+    border-color: var(--primary);
+    box-shadow: 0 5px 20px rgba(212, 167, 152, 0.1);
+}
+
+.procedure-details h4 {
+    color: var(--text);
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+}
+
+.procedure-price-large {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.procedure-duration {
+    color: var(--dark-beige);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Book Now Button */
+.book-now-btn {
+    width: 100%;
+    margin-top: 25px;
+    justify-content: center;
+    opacity: 0.6;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+}
+
+.book-now-btn:enabled {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.book-now-btn:enabled:hover {
+    transform: translateY(-3px);
+}
+
+/* Right Panel - Calendar */
+.calendar-widget-container {
+    position: relative;
+    min-height: 600px;
+    background: white;
+    border-radius: 25px;
+}
+
+.calendar-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    color: var(--dark-beige);
+    border-radius: 25px;
+}
+
+.placeholder-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+.calendar-placeholder h3 {
+    color: var(--text);
+    font-family: "Playfair Display", serif;
+    margin-bottom: 10px;
+    font-size: 24px;
+    border-radius: 25px;
+}
+
+.calendar-placeholder p {
+    font-size: 16px;
+    max-width: 300px;
+    line-height: 1.5;
+}
+
+.calendly-widget {
+    width: 100%;
+    border-radius: 0 0 20px 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.calendly-widget.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.calendly-inline-widget {
+    border-radius: 0 0 20px 0 !important;
+}
+
+/* MOBILE CALENDLY FIXES */
+@media (max-width: 768px) {
+    .elegant-booking-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .calendar-widget-container {
+        min-height: 700px !important; /* Increased height for mobile */
+        height: 700px !important;
+        border-radius: 25px;
+    }
+    
+    .calendar-placeholder,
+    .calendly-widget {
+        min-height: 700px !important;
+        border-radius: 25px;
+    }
+    
+    .calendly-inline-widget {
+        min-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    /* Ensure Calendly iframe is properly sized */
+    .calendly-inline-widget iframe {
+        min-height: 700px !important;
+        width: 100% !important;
+        min-width: 100% !important;
+    }
+    
+    /* Fix for booking panel on mobile */
+    .booking-selection-panel {
+        padding: 25px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(212, 167, 152, 0.2);
+    }
+    
+    /* Adjust the overall booking section padding */
+    #booking.section {
+        padding: 60px 15px;
+    }
+    
+    .booking-content {
+        padding: 20px 15px;
+    }
+}
+
+/* Additional mobile fixes for very small screens */
+@media (max-width: 480px) {
+    .calendar-widget-container {
+        min-height: 750px !important;
+    }
+    
+    .calendar-placeholder,
+    .calendly-widget {
+        min-height: 300px !important;
+    }
+    
+    .calendly-inline-widget {
+        height: 750px !important;
+    }
+    
+    .calendly-inline-widget iframe {
+        height: 750px !important;
+    }
+    
+    .booking-selection-panel {
+        padding: 20px 15px;
+    }
+}
+
+/* Force Calendly widget to be responsive */
+.calendly-inline-widget {
+    width: 100% !important;
+}
+
+/* Ensure the widget container doesn't have fixed width */
+.calendly-widget.active {
+    width: 100%;
+    height: auto;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 968px) {
+    .elegant-booking-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .booking-selection-panel {
+        border-right: none;
+        border-bottom: 1px solid rgba(212, 167, 152, 0.2);
+        padding: 30px 20px;
+    }
+    
+    .calendar-widget-container {
+        min-height: 500px;
+    }
+    
+    .calendar-placeholder,
+    .calendly-widget {
+        height: 500px;
+    }
+    
+    .calendly-inline-widget {
+        border-radius: 0 0 20px 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-selection-panel {
+        padding: 25px 15px;
+    }
+    
+    .selection-group {
+        margin-bottom: 20px;
+    }
+    
+    .dropdown-header {
+        padding: 15px;
+    }
+    
+    .dropdown-option,
+    .procedure-option {
+        padding: 12px 15px;
+    }
+    
+    .selected-procedure-info {
+        padding: 20px;
+    }
+    
+    .calendar-placeholder {
+        padding: 30px 20px;
+        height: 400px;
+    }
+    
+    .calendly-widget {
+        height: 400px;
+    }
+}
+
+/* Animation for dropdown options */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-option,
+.procedure-option {
+    animation: slideInUp 0.3s ease-out both;
+}
+
+.dropdown-option:nth-child(1) { animation-delay: 0.05s; }
+.dropdown-option:nth-child(2) { animation-delay: 0.1s; }
+.dropdown-option:nth-child(3) { animation-delay: 0.15s; }
+.dropdown-option:nth-child(4) { animation-delay: 0.2s; }
+
+/* ELEGANT BOOKING BUTTON STYLES */
+.elegant-booking-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--dark-beige) 100%);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 8px 25px rgba(212, 167, 152, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin-top: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 5s ease-out 0.6s both;
+}
+
+.elegant-booking-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.elegant-booking-btn:hover::before {
+    left: 100%;
+}
+
+.elegant-booking-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(212, 167, 152, 0.4);
+    background: linear-gradient(135deg, var(--dark-beige) 0%, var(--primary) 100%);
+}
+
+.elegant-booking-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.btn-icon {
+    font-size: 18px;
+}
+
+.btn-text {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.btn-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.elegant-booking-btn:hover .btn-arrow {
+    transform: translateY(4px);
+}
+
+@keyframes gentleSparkle {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1) rotate(10deg);
+        opacity: 0.8;
+    }
+}
+
+/* Mobile responsiveness for the booking button */
+@media (max-width: 768px) {
+    .elegant-booking-btn {
+        padding: 14px 24px;
+        font-size: 14px;
+        gap: 8px;
+    }
+    
+    .btn-icon {
+        font-size: 16px;
+    }
+    
+    .btn-arrow {
+        font-size: 16px;
+    }
+}
+
+/* Ensure the button is properly positioned in the hero section */
+.hero-centre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
