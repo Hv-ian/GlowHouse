@@ -15,7 +15,7 @@ const translations = {
         makeup: "Makeup",
         makeupDesc: "Professional makeup for every occasion — weddings, events, parties, or natural everyday beauty. Our artists enhance your glow with precision and creativity.",
         makeupFeatures: ["Bridal Makeup", "Evening Glam", "Natural Look"],
-        hairdresser: "Hairdresser",
+        hairdresser: "Hair",
         hairdresserDesc: "From modern cuts to vibrant colouring, blowouts, styling, and full transformations. Your hair is treated with premium products and expert care.",
         hairdresserFeatures: ["Hair Coloring", "Styling", "Extensions"],
         nails: "Nails",
@@ -30,6 +30,13 @@ const translations = {
         bookHair: "Book Hair",
         bookNails: "Book Nails",
         bookSkincare: "Book Skincare",
+        "other-services": "Other Services",
+        "otherSubtitle": "Professional body treatment services",
+
+        selectServiceCategory: "Select a service category",
+        selectProcedure: "Select a procedure",
+        noProcedureSelected: "No procedure selected",
+        selectProcedureDetails: "Select a procedure to see details",
 
         // CALENDAR TRANSLATIONS
         calendarTitle: "Our Beauty Hours",
@@ -116,6 +123,14 @@ const translations = {
         bookHair: "Վարսահարդարում",
         bookNails: "Մատնահարդարում",
         bookSkincare: "Մաշկի խնամք",
+
+        "other-services": "Այլ ծառայություններ",
+        "otherSubtitle": "Մասնագիտական մարմնի խնամքի ծառայություններ",
+
+        selectServiceCategory: "Ընտրեք ծառայության կատեգորիա",
+        selectProcedure: "Ընտրեք ծառայությունը",
+        noProcedureSelected: "Ծառայություն չի ընտրվել",
+        selectProcedureDetails: "Ընտրեք ծառայությունը, մանրամասները տեսնելու համար",
 
         // CALENDAR TRANSLATIONS - ARMENIAN
         calendarTitle: "Մեր Աշխատանքային Ժամերը",
@@ -227,6 +242,14 @@ const translations = {
         hoursDetail: "Вторник - Воскресенье: 10:00 - 19:00",
         bookSession: "Забронировать Сеанс",
 
+        "other-services": "Другие Услуги",
+        "otherSubtitle": "Профессиональные услуги по уходу за телом",
+
+        selectServiceCategory: "Выберите категорию услуги",
+        selectProcedure: "Выберите процедуру",
+        noProcedureSelected: "Процедура не выбрана",
+        selectProcedureDetails: "Выберите процедуру, чтобы увидеть детали",
+
         // CONTACT TRANSLATIONS - RUSSIAN
         contactTitle: "Контакты",
         email: "Эл. Почта",
@@ -309,6 +332,14 @@ const procedureTranslations = {
             { name: "Չոր մաշկի խնամք (2ժամ)", price: "15,000 AMD", duration: "120 րոպե" },
             { name: "Դասական մերսում+դիմակ (30րոպե)", price: "10,000 AMD", duration: "30 րոպե" },
             { name: "Բուսական պիլինգ + չիստկա (2ժամ)", price: "15,000 AMD", duration: "120 րոպե" }
+        ],
+        "other-services": [
+            { name: "Հոնքերի շտկում", price: "2,000 AMD", duration: "15 րոպե" },
+            { name: "Ասեղային մազահեռացում (1 ժամ)", price: "4,000 AMD", duration: "60 րոպե" },
+            { name: "(Ոսկով մազահեռացում) Թևատակ", price: "2,000 AMD", duration: "20 րոպե" },
+            { name: "(Ոսկով մազահեռացում) Ոտքեր", price: "4,000 AMD", duration: "45 րոպե" },
+            { name: "(Ոսկով մազահեռացում) Ձեռքեր", price: "2,000 AMD", duration: "30 րոպե" },
+            { name: "(Ոսկով մազահեռացում) Դեմք", price: "2,000 AMD", duration: "20 րոպե" }
         ]
     },
     ru: {
@@ -351,6 +382,23 @@ const procedureTranslations = {
             { name: "Уход за сухой кожей (2 часа)", price: "15,000 AMD", duration: "120 мин" },
             { name: "Классический массаж + маска (30 минут)", price: "10,000 AMD", duration: "30 мин" },
             { name: "Растительный пилинг + чистка (2 часа)", price: "15,000 AMD", duration: "120 мин" }
+        ],
+        "other-services": [
+            { name: "Коррекция бровей", price: "2,000 AMD", duration: "15 мин" },
+            { name: "(Восковая эпиляция) Подмышки", price: "2,000 AMD", duration: "20 мин" },
+            { name: "(Восковая эпиляция) Ноги", price: "4,000 AMD", duration: "45 мин" },
+            { name: "(Восковая эпиляция) Руки", price: "2,000 AMD", duration: "30 мин" },
+            { name: "(Восковая эпиляция) Лицо", price: "2,000 AMD", duration: "20 мин" }
+        ]
+    },
+    en: {
+        "other-services": [
+            { name: "Eyebrow Shaping", price: "2,000 AMD", duration: "15 min" },
+            { name: "Needle Hair Removal (1 hour)", price: "4,000 AMD", duration: "60 min" },
+            { name: "(Wax Hair Removal) Underarms", price: "2,000 AMD", duration: "20 min" },
+            { name: "(Wax Hair Removal) Legs", price: "4,000 AMD", duration: "45 min" },
+            { name: "(Wax Hair Removal) Hands", price: "2,000 AMD", duration: "30 min" },
+            { name: "(Wax Hair Removal) Face", price: "2,000 AMD", duration: "20 min" }
         ]
     }
 };
@@ -891,6 +939,7 @@ function openEmailClient(emailAddress) {
 }
 
 // Elegant Booking Functionality
+// Elegant Booking Functionality
 function initializeElegantBooking() {
     const serviceProcedures = {
         makeup: [
@@ -932,6 +981,14 @@ function initializeElegantBooking() {
             { name: "Dry skin care (2 hours)", price: "15,000 AMD", duration: "120 min", url: "https://calendly.com/glowhouseinfo/skincare?hide_event_type_details=1&hide_gdpr_banner=1" },
             { name: "Classic massage + mask (30 minutes)", price: "10,000 AMD", duration: "30 min", url: "https://calendly.com/glowhouseinfo/skincare?hide_event_type_details=1&hide_gdpr_banner=1" },
             { name: "Plant peeling + cleaning (2 hours)", price: "15,000 AMD", duration: "120 min", url: "https://calendly.com/glowhouseinfo/skincare?hide_event_type_details=1&hide_gdpr_banner=1" }
+        ],
+        "other-services": [
+            { name: "Eyebrow Shaping", price: "2,000 AMD", duration: "15 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "Needle Hair Removal (1 hour)", price: "4,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "(Wax Hair Removal) Underarms", price: "1,500 AMD", duration: "20 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "(Wax Hair Removal) Legs", price: "4,000 AMD", duration: "45 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "(Wax Hair Removal) Hands", price: "2,000 AMD", duration: "30 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
+            { name: "(Wax Hair Removal) Face", price: "1,500 AMD", duration: "20 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" }
         ]
     };
 
@@ -1022,6 +1079,7 @@ function initializeElegantBooking() {
     });
 
     // Populate procedures based on selected category
+    // In the populateProcedures function, update the reset part:
     function populateProcedures(category) {
         const procedures = serviceProcedures[category] || [];
         const translatedProcedures = procedureTranslations[currentLang]?.[category] || procedures;
@@ -1101,11 +1159,11 @@ function initializeElegantBooking() {
 
         setTimeout(() => {
             calendlyWidget.innerHTML = `
-                <div class="calendly-inline-widget" 
-                     data-url="${url}" 
-                     style="min-width:320px;height:600px;">
-                </div>
-            `;
+                    <div class="calendly-inline-widget" 
+                         data-url="${url}" 
+                         style="min-width:320px;height:600px;">
+                    </div>
+                `;
 
             if (window.Calendly) {
                 window.Calendly.initInlineWidget({
