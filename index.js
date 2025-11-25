@@ -187,7 +187,7 @@ const translations = {
         makeupSubtitle: "Պրոֆեսիոնալ դիմահարդարման ծառայություններ",
         hairSubtitle: "Ոճավորում և մազերի խնամք",
         nailsSubtitle: "Մատնահարդարում և ոտնահարդարում",
-        skincareSubtitle: "Կոսմետոլոգիայի բուժումներ",
+        skincareSubtitle: "Կոսմետոլոգիական ծառայություններ",
         bookNow: "Ամրագրել Հիմա",
         noProcedures: "Այս ծառայության համար ծառայություններ չկան",
         duration: "Տևողություն"
