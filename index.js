@@ -38,10 +38,12 @@ const translations = {
         selectProcedure: "Select a procedure",
         noProcedureSelected: "No procedure selected",
         selectProcedureDetails: "Select a procedure to see details",
+        findUs: "Find Us",
+        getDirections: "Get Directions",
 
         // CALENDAR TRANSLATIONS
         calendarTitle: "Our Beauty Hours",
-        calendarSubtitle: "Tuesday to Sunday: 08:00 - 19:00 (Monday only with appointment) ✨",
+        calendarSubtitle: "Tuesday to Sunday: 08:00 - 19:00 (Monday only with appointment)",
         monday: "Monday",
         tuesday: "Tuesday",
         wednesday: "Wednesday",
@@ -134,6 +136,9 @@ const translations = {
         selectProcedure: "Ընտրեք ծառայությունը",
         noProcedureSelected: "Ծառայություն չի ընտրվել",
         selectProcedureDetails: "Ընտրեք ծառայությունը, մանրամասները տեսնելու համար",
+
+        findUs: "Գտեք մեզ",
+        getDirections: "Գնալ",
 
         // CALENDAR TRANSLATIONS - ARMENIAN
         calendarTitle: "Մեր Աշխատանքային Ժամերը",
@@ -253,6 +258,8 @@ const translations = {
         selectProcedure: "Выберите процедуру",
         noProcedureSelected: "Процедура не выбрана",
         selectProcedureDetails: "Выберите процедуру, чтобы увидеть детали",
+        findUs: "Найти нас",
+        getDirections: "Построить маршрут",
 
         // CONTACT TRANSLATIONS - RUSSIAN
         contactTitle: "Контакты",
