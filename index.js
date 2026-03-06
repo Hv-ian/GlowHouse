@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeHamburgerMenu();
     initializeContactCards();
     initializeElegantBooking();
-    initializeMobileCalendly()
+    initializeMobileCalendly();
 
     // Add smooth scroll to all internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -941,54 +941,55 @@ function openEmailClient(emailAddress) {
 // Elegant Booking Functionality
 // Elegant Booking Functionality
 function initializeElegantBooking() {
+    const BOOKING_URL = "https://calendly.com/glowhouseinfo/services";
     const serviceProcedures = {
         makeup: [
-            { name: "Everyday makeup without lashes", price: "6,000 AMD", duration: "45 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Evening makeup", price: "8,000 AMD", duration: "60-120 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Bridal makeup", price: "13,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Décolleté treatment", price: "+1,000 AMD", duration: "15 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Lash granulation & general", price: "3,000 AMD", duration: "20 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Eyebrow shaping", price: "2,000 AMD", duration: "15 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Needle hair removal (1 hour)", price: "4,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" }
+            { name: "Everyday makeup without lashes", price: "6,000 AMD", duration: "45 min", url: BOOKING_URL },
+            { name: "Evening makeup", price: "8,000 AMD", duration: "60-120 min", url: BOOKING_URL },
+            { name: "Bridal makeup", price: "13,000 AMD", duration: "90 min", url: BOOKING_URL },
+            { name: "Décolleté treatment", price: "+1,000 AMD", duration: "15 min", url: BOOKING_URL },
+            { name: "Lash granulation & general", price: "3,000 AMD", duration: "20 min", url: BOOKING_URL },
+            { name: "Eyebrow shaping", price: "2,000 AMD", duration: "15 min", url: BOOKING_URL },
+            { name: "Needle hair removal (1 hour)", price: "4,000 AMD", duration: "60 min", url: BOOKING_URL }
         ],
         hair: [
-            { name: "Haircut", price: "1,500-3,000 AMD", duration: "30 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Blow-dry", price: "1,500-5,000 AMD", duration: "45 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Mixed blow-dry (comma)", price: "2,000-5,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Chips", price: "3,000-8,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Coloring", price: "1,500-2,000 AMD", duration: "45 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Color bleaching", price: "15,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Keratin", price: "15,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Hairstyle (ponytail)", price: "4,000-8,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Bridal hairstyles", price: "10,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" }
+            { name: "Haircut", price: "1,500-3,000 AMD", duration: "30 min", url: BOOKING_URL },
+            { name: "Blow-dry", price: "1,500-5,000 AMD", duration: "45 min", url: BOOKING_URL },
+            { name: "Mixed blow-dry (comma)", price: "2,000-5,000 AMD", duration: "60 min", url: BOOKING_URL },
+            { name: "Chips", price: "3,000-8,000 AMD", duration: "60 min", url: BOOKING_URL },
+            { name: "Coloring", price: "1,500-2,000 AMD", duration: "45 min", url: BOOKING_URL },
+            { name: "Color bleaching", price: "15,000 AMD", duration: "90 min", url: BOOKING_URL },
+            { name: "Keratin", price: "15,000 AMD", duration: "90 min", url: BOOKING_URL },
+            { name: "Hairstyle (ponytail)", price: "4,000-8,000 AMD", duration: "60 min", url: BOOKING_URL },
+            { name: "Bridal hairstyles", price: "10,000 AMD", duration: "90 min", url: BOOKING_URL }
         ],
         nails: [
-            { name: "Gellac", price: "5,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Classic manicure", price: "2,000 AMD", duration: "45 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Japanese care (15 minutes)", price: "3,000 AMD", duration: "15 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Removal", price: "1,000 AMD", duration: "15 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Gel strengthening", price: "6,000 AMD", duration: "75 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Charge (Nail extension)", price: "1,000 AMD", duration: "30 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "French + design", price: "+1,000 AMD", duration: "+15 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Base smoothing + French", price: "6,000 AMD", duration: "75 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Gel strengthening + French", price: "7,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Pedicure", price: "7,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Heels + gellac", price: "10,000 AMD", duration: "90 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" }
+            { name: "Gellac", price: "5,000 AMD", duration: "60 min", url: BOOKING_URL },
+            { name: "Classic manicure", price: "2,000 AMD", duration: "45 min", url: BOOKING_URL },
+            { name: "Japanese care (15 minutes)", price: "3,000 AMD", duration: "15 min", url: BOOKING_URL },
+            { name: "Removal", price: "1,000 AMD", duration: "15 min", url: BOOKING_URL },
+            { name: "Gel strengthening", price: "6,000 AMD", duration: "75 min", url: BOOKING_URL },
+            { name: "Charge (Nail extension)", price: "1,000 AMD", duration: "30 min", url: BOOKING_URL },
+            { name: "French + design", price: "+1,000 AMD", duration: "+15 min", url: BOOKING_URL },
+            { name: "Base smoothing + French", price: "6,000 AMD", duration: "75 min", url: BOOKING_URL },
+            { name: "Gel strengthening + French", price: "7,000 AMD", duration: "90 min", url: BOOKING_URL },
+            { name: "Pedicure", price: "7,000 AMD", duration: "60 min", url: BOOKING_URL },
+            { name: "Heels + gellac", price: "10,000 AMD", duration: "90 min", url: BOOKING_URL }
         ],
         skincare: [
-            { name: "Combined skin cleaning (2 hours)", price: "15,000 AMD", duration: "120 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Oily skin cleaning (2 hours)", price: "15,000 AMD", duration: "120 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Dry skin care (2 hours)", price: "15,000 AMD", duration: "120 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Classic massage + mask (30 minutes)", price: "10,000 AMD", duration: "30 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Plant peeling + cleaning (2 hours)", price: "15,000 AMD", duration: "120 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" }
+            { name: "Combined skin cleaning (2 hours)", price: "15,000 AMD", duration: "120 min", url: BOOKING_URL },
+            { name: "Oily skin cleaning (2 hours)", price: "15,000 AMD", duration: "120 min", url: BOOKING_URL },
+            { name: "Dry skin care (2 hours)", price: "15,000 AMD", duration: "120 min", url: BOOKING_URL },
+            { name: "Classic massage + mask (30 minutes)", price: "10,000 AMD", duration: "30 min", url: BOOKING_URL },
+            { name: "Plant peeling + cleaning (2 hours)", price: "15,000 AMD", duration: "120 min", url: BOOKING_URL }
         ],
         "other-services": [
-            { name: "Eyebrow Shaping", price: "2,000 AMD", duration: "15 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "Needle Hair Removal (1 hour)", price: "4,000 AMD", duration: "60 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "(Wax Hair Removal) Underarms", price: "1,500 AMD", duration: "20 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "(Wax Hair Removal) Legs", price: "4,000 AMD", duration: "45 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "(Wax Hair Removal) Hands", price: "2,000 AMD", duration: "30 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" },
-            { name: "(Wax Hair Removal) Face", price: "1,500 AMD", duration: "20 min", url: "https://calendly.com/glowhouseinfo/other-services?hide_event_type_details=1&hide_gdpr_banner=1" }
+            { name: "Eyebrow Shaping", price: "2,000 AMD", duration: "15 min", url: BOOKING_URL },
+            { name: "Needle Hair Removal (1 hour)", price: "4,000 AMD", duration: "60 min", url: BOOKING_URL },
+            { name: "(Wax Hair Removal) Underarms", price: "1,500 AMD", duration: "20 min", url: BOOKING_URL },
+            { name: "(Wax Hair Removal) Legs", price: "4,000 AMD", duration: "45 min", url: BOOKING_URL },
+            { name: "(Wax Hair Removal) Hands", price: "2,000 AMD", duration: "30 min", url: BOOKING_URL },
+            { name: "(Wax Hair Removal) Face", price: "1,500 AMD", duration: "20 min", url: BOOKING_URL }
         ]
     };
 
