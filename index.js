@@ -7,7 +7,7 @@ const translations = {
         home: "Home",
         services: "Our Services",
         booking: "Book Appointment",
-        calendar: "Calendar",
+        calendar: "Opening Hours",
         contact: "Contact",
         address: "Russia Street 14/4/2, Abovyan",
         subtitle: "Armenian Beauty & Skincare Studio",
@@ -30,8 +30,9 @@ const translations = {
         bookHair: "Book Hair",
         bookNails: "Book Nails",
         bookSkincare: "Book Skincare",
-        "other-services": "Other Services",
-        "otherSubtitle": "Professional body treatment services",
+        otherServices: "Other Services",
+        otherSubtitle: "Professional body treatment services",
+        instagramBtn: "See All Our Work on Instagram",
 
         selectServiceCategory: "Select a service category",
         selectProcedure: "Select a procedure",
@@ -40,7 +41,7 @@ const translations = {
 
         // CALENDAR TRANSLATIONS
         calendarTitle: "Our Beauty Hours",
-        calendarSubtitle: "When we're here to make you glow",
+        calendarSubtitle: "Tuesday to Sunday: 08:00 - 19:00 (Monday only with appointment) ✨",
         monday: "Monday",
         tuesday: "Tuesday",
         wednesday: "Wednesday",
@@ -123,9 +124,11 @@ const translations = {
         bookHair: "Վարսահարդարում",
         bookNails: "Մատնահարդարում",
         bookSkincare: "Մաշկի խնամք",
+        bookSession: "Ամրագրել հիմա",
+        instagramBtn: "Տեսեք մեր բոլոր աշխատանքները Ինստագրամում",
 
-        "other-services": "Այլ ծառայություններ",
-        "otherSubtitle": "Մասնագիտական մարմնի խնամքի ծառայություններ",
+        otherServices: "Այլ ծառայություններ",
+        otherSubtitle: "Մասնագիտական մարմնի խնամքի ծառայություններ",
 
         selectServiceCategory: "Ընտրեք ծառայության կատեգորիա",
         selectProcedure: "Ընտրեք ծառայությունը",
@@ -134,7 +137,7 @@ const translations = {
 
         // CALENDAR TRANSLATIONS - ARMENIAN
         calendarTitle: "Մեր Աշխատանքային Ժամերը",
-        calendarSubtitle: "Մենք այստեղ ենք ձեզ սիրով սպասարկելու համար ✨",
+        calendarSubtitle: "Երեքշաբթի - Կիրակի: 08:00 - 19:00 (Երկուշաբթի միայն ամրագրումով)",
         monday: "Երկուշաբթի",
         tuesday: "Երեքշաբթի",
         wednesday: "Չորեքշաբթի",
@@ -220,9 +223,10 @@ const translations = {
         bookNails: "Записаться на Ногти",
         bookSkincare: "Записаться на Уход за кожей",
 
+
         // CALENDAR TRANSLATIONS - RUSSIAN
         calendarTitle: "Наши Часы Работы",
-        calendarSubtitle: "Когда мы здесь, чтобы сделать вас сияющими",
+        calendarSubtitle: "Вторник - Воскресенье: 08:00 - 19:00 (Понедельник только по записи)",
         monday: "Понедельник",
         tuesday: "Вторник",
         wednesday: "Среда",
@@ -241,9 +245,9 @@ const translations = {
         openingHours: "Часы Работы:",
         hoursDetail: "Вторник - Воскресенье: 10:00 - 19:00",
         bookSession: "Забронировать Сеанс",
-
-        "other-services": "Другие Услуги",
-        "otherSubtitle": "Профессиональные услуги по уходу за телом",
+        otherServices: "Другие Услуги",
+        otherSubtitle: "Профессиональные услуги по уходу за телом",
+        instagramBtn: "Посмотрите все наши работы в Instagram",
 
         selectServiceCategory: "Выберите категорию услуги",
         selectProcedure: "Выберите процедуру",
@@ -416,6 +420,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeContactCards();
     initializeElegantBooking();
     initializeMobileCalendly();
+    initializeGallery();
 
     // Add smooth scroll to all internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1280,3 +1285,211 @@ style.textContent = `
     .img-3 { grid-column: 3; grid-row: 1; }
 `;
 document.head.appendChild(style);
+
+function initializeGallery() {
+    const scene = document.getElementById('galleryScene');
+    const track = document.getElementById('galleryTrack');
+    const cards = Array.from(track ? track.querySelectorAll('.gallery-card') : []);
+    const lb = document.getElementById('galleryLightbox');
+    const lbImg = document.getElementById('lightboxImg');
+    const lbClose = document.getElementById('lightboxClose');
+    const lbPrev = document.getElementById('lightboxPrev');
+    const lbNext = document.getElementById('lightboxNext');
+
+    if (!scene || !track || cards.length === 0) return;
+
+    const CARD_W = 280;
+    const GAP = 28;
+    const STEP = CARD_W + GAP;
+    const TOTAL_W = STEP * cards.length;
+    const AUTO_SPEED = 1.5; // px per frame — adjust to taste
+
+    let currentX = STEP * 2;
+    let targetX = STEP * 2;
+    let isDragging = false;
+    let isHovered = false;
+    let isPaused = false;
+    let startX = 0;
+    let lastX = 0;
+    let dragDeltaX = 0;
+    let lbIndex = 0;
+    let inView = false;
+
+    // --- Intersection Observer: only auto-scroll when section is visible ---
+    const sectionObserver = new IntersectionObserver(entries => {
+        inView = entries[0].isIntersecting;
+    }, { threshold: 0.2 });
+    sectionObserver.observe(scene.closest('.gallery-section') || scene);
+
+    // --- Helpers ---
+    function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+    function getCenterIndex() {
+        return Math.round(currentX / STEP) % cards.length;
+    }
+
+    function applyTilt() {
+        const ci = Math.round(currentX / STEP) % cards.length;
+        cards.forEach((card, i) => {
+            if (card.classList.contains('is-hovered')) return;
+            card.classList.remove('is-center', 'tilt-left', 'tilt-left2', 'tilt-right', 'tilt-right2');
+            // Compute circular distance
+            let diff = i - ci;
+            // Wrap
+            if (diff > cards.length / 2) diff -= cards.length;
+            if (diff < -cards.length / 2) diff += cards.length;
+
+            if (diff === 0) card.classList.add('is-center');
+            else if (diff === -1) card.classList.add('tilt-left');
+            else if (diff <= -2) card.classList.add('tilt-left2');
+            else if (diff === 1) card.classList.add('tilt-right');
+            else if (diff >= 2) card.classList.add('tilt-right2');
+        });
+    }
+
+    // --- RAF loop ---
+    function tick() {
+        // Auto-scroll when in view and not paused
+        if (inView && !isPaused && !isDragging) {
+            targetX += AUTO_SPEED;
+        }
+
+        // Wrap targetX infinitely
+        targetX = ((targetX % TOTAL_W) + TOTAL_W) % TOTAL_W;
+        currentX += (targetX - currentX) * 0.06;
+        if (Math.abs(targetX - currentX) < 0.01) currentX = targetX;
+
+        // Translate: offset so the track wraps visually
+        // We duplicate display by shifting the transform
+        const offset = currentX % TOTAL_W;
+        track.style.transform = `translateX(${-offset}px)`;
+
+        applyTilt();
+        requestAnimationFrame(tick);
+    }
+
+    // --- Hover pause ---
+    cards.forEach((card, i) => {
+        card.addEventListener('mouseenter', () => {
+            isPaused = true;
+            isHovered = true;
+            cards.forEach(c => c.classList.remove('is-center', 'tilt-left', 'tilt-left2', 'tilt-right', 'tilt-right2', 'is-hovered'));
+            card.classList.add('is-hovered');
+        });
+
+        card.addEventListener('mouseleave', () => {
+            isPaused = false;
+            isHovered = false;
+            card.classList.remove('is-hovered');
+            applyTilt();
+        });
+
+        // Click to open lightbox (only if not dragging)
+        card.addEventListener('click', () => {
+            if (Math.abs(dragDeltaX) > 8) return;
+            lbIndex = i;
+            openLightbox(i);
+        });
+    });
+
+    // --- Drag ---
+    scene.addEventListener('pointerdown', e => {
+        isDragging = true;
+        isPaused = true;
+        startX = e.clientX;
+        lastX = e.clientX;
+        dragDeltaX = 0;
+        scene.setPointerCapture(e.pointerId);
+        scene.style.cursor = 'grabbing';
+    });
+
+    scene.addEventListener('pointermove', e => {
+        if (!isDragging) return;
+        const dx = e.clientX - lastX;
+        dragDeltaX = e.clientX - startX;
+        lastX = e.clientX;
+        targetX -= dx * 1.4;
+    });
+
+    scene.addEventListener('pointerup', () => {
+        isDragging = false;
+        isPaused = isHovered;
+        scene.style.cursor = 'grab';
+    });
+
+    // --- Touch ---
+    let touchStartX = 0;
+    scene.addEventListener('touchstart', e => {
+        touchStartX = e.touches[0].clientX;
+        isPaused = true;
+        dragDeltaX = 0;
+    }, { passive: true });
+
+    scene.addEventListener('touchmove', e => {
+        const dx = touchStartX - e.touches[0].clientX;
+        dragDeltaX = dx;
+        targetX += dx * 0.8;
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    scene.addEventListener('touchend', () => {
+        isPaused = false;
+    });
+
+    // --- Wheel ---
+    scene.addEventListener('wheel', e => {
+        e.preventDefault();
+        targetX += e.deltaY * 0.8;
+        isPaused = true;
+        clearTimeout(scene._wheelTimer);
+        scene._wheelTimer = setTimeout(() => { isPaused = false; }, 1200);
+    }, { passive: false });
+
+    // --- Lightbox ---
+    function openLightbox(idx) {
+        lbIndex = idx;
+        lbImg.src = cards[idx].querySelector('img').src;
+        lb.classList.add('open');
+        // iOS Safari fix: don't hide body overflow, use position fixed instead
+        document.body.style.top = `-${window.scrollY}px`;
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+        isPaused = true;
+    }
+
+    function closeLightbox() {
+        lb.classList.remove('open');
+        // Restore scroll position after removing fixed positioning
+        const scrollY = document.body.style.top;
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        isPaused = false;
+    }
+
+    function lightboxNav(dir) {
+        lbIndex = ((lbIndex + dir) + cards.length) % cards.length;
+        lbImg.style.opacity = '0';
+        setTimeout(() => {
+            lbImg.src = cards[lbIndex].querySelector('img').src;
+            lbImg.style.opacity = '1';
+        }, 150);
+    }
+
+    lbImg.style.transition = 'opacity 0.15s ease';
+    lbClose.addEventListener('click', closeLightbox);
+    lb.querySelector('.lightbox-backdrop').addEventListener('click', closeLightbox);
+    lbPrev.addEventListener('click', () => lightboxNav(-1));
+    lbNext.addEventListener('click', () => lightboxNav(1));
+
+    document.addEventListener('keydown', e => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') lightboxNav(-1);
+        if (e.key === 'ArrowRight') lightboxNav(1);
+    });
+
+    // --- Start ---
+    requestAnimationFrame(tick);
+}

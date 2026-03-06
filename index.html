@@ -10,6 +10,8 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+    <link rel="apple-touch-icon" href="images/logo.jpeg">
 </head>
 
 <body>
@@ -37,7 +39,7 @@
             <li><a href="#home" data-key="home">Home</a></li>
             <li><a href="#services" data-key="services">Our Services</a></li>
             <li><a href="#booking" data-key="booking">Book Appointment</a></li>
-            <li><a href="#calendar" data-key="calendar">Calendar</a></li>
+            <li><a href="#calendar" data-key="calendar">Gallery</a></li>
             <li><a href="#contact" data-key="contact">Contact</a></li>
         </ul>
     </nav>
@@ -201,7 +203,7 @@
                                 <div class="dropdown-option" data-category="other-services">
                                     <div class="option-icon">☘️</div>
                                     <div class="option-info">
-                                        <span class="option-title" data-key="other-services">Other Services</span>
+                                        <span class="option-title" data-key="otherServices">Other Services</span>
                                         <span class="option-subtitle" data-key="otherSubtitle">Professional body
                                             treatment
                                             services</span>
@@ -265,106 +267,78 @@
         </div>
     </section>
 
-    <!-- CALENDAR -->
-    <section id="calendar" class="section">
-        <div class="calendar-header">
-            <h2 class="section-title" data-key="calendarTitle">Our Beauty Hours</h2>
-            <p class="calendar-subtitle" data-key="calendarSubtitle">When we're here to make you glow</p>
+    <!-- 3D GALLERY SECTION -->
+    <section id="calendar" class="section gallery-section">
+        <div class="gallery-header">
+            <h2 class="section-title" data-key="calendarTitle">Our Work</h2>
+            <p class="calendar-subtitle" data-key="calendarSubtitle">A glimpse into the glow we create</p>
             <div class="calendar-sparkle">✨</div>
         </div>
 
-        <div class="elegant-calendar">
-            <!-- Monday -->
-            <div class="calendar-day closed" data-day="monday">
-                <div class="day-glow"></div>
-                <div class="day-content">
-                    <div class="day-name" data-key="monday">Monday</div>
-                    <div class="day-icon">🌙</div>
-                    <div class="day-status" data-key="mondayStatus">Beauty Rest Day</div>
-                    <div class="day-hours" data-key="closed">Closed</div>
+        <div class="gallery-scene" id="galleryScene">
+            <div class="gallery-track" id="galleryTrack">
+                <div class="gallery-card" style="--i:0"><img src="images/hair_work2.jpeg" alt="Work 1">
+                    <div class="card-shimmer"></div>
                 </div>
-            </div>
-
-            <!-- Tuesday -->
-            <div class="calendar-day open" data-day="tuesday">
-                <div class="day-glow"></div>
-                <div class="day-content">
-                    <div class="day-name" data-key="tuesday">Tuesday</div>
-                    <div class="day-icon">💄</div>
-                    <div class="day-status" data-key="tuesdayStatus">Ready to Glow</div>
-                    <div class="day-hours">10:00 - 19:00</div>
+                <div class="gallery-card" style="--i:1"><img src="images/pic6.jpg" alt="Work 2">
+                    <div class="card-shimmer"></div>
                 </div>
-            </div>
-
-            <!-- Wednesday -->
-            <div class="calendar-day open" data-day="wednesday">
-                <div class="day-glow"></div>
-                <div class="day-content">
-                    <div class="day-name" data-key="wednesday">Wednesday</div>
-                    <div class="day-icon">🌟</div>
-                    <div class="day-status" data-key="wednesdayStatus">Midweek Magic</div>
-                    <div class="day-hours">10:00 - 19:00</div>
+                <div class="gallery-card" style="--i:2"><img src="images/salon_inside2.jpeg" alt="Work 3">
+                    <div class="card-shimmer"></div>
                 </div>
-            </div>
-
-            <!-- Thursday -->
-            <div class="calendar-day open" data-day="thursday">
-                <div class="day-glow"></div>
-                <div class="day-content">
-                    <div class="day-name" data-key="thursday">Thursday</div>
-                    <div class="day-icon">✨</div>
-                    <div class="day-status" data-key="thursdayStatus">Transformation Day</div>
-                    <div class="day-hours">10:00 - 19:00</div>
+                <div class="gallery-card" style="--i:3"><img src="images/pic10.avif" alt="Work 4">
+                    <div class="card-shimmer"></div>
                 </div>
-            </div>
-
-            <!-- Friday -->
-            <div class="calendar-day open" data-day="friday">
-                <div class="day-glow"></div>
-                <div class="day-content">
-                    <div class="day-name" data-key="friday">Friday</div>
-                    <div class="day-icon">🎉</div>
-                    <div class="day-status" data-key="fridayStatus">Weekend Ready</div>
-                    <div class="day-hours">10:00 - 19:00</div>
+                <div class="gallery-card" style="--i:4"><img src="images/salon_inside1.jpeg" alt="Work 5">
+                    <div class="card-shimmer"></div>
                 </div>
-            </div>
-
-            <!-- Saturday -->
-            <div class="calendar-day open" data-day="saturday">
-                <div class="day-glow"></div>
-                <div class="day-content">
-                    <div class="day-name" data-key="saturday">Saturday</div>
-                    <div class="day-icon">💖</div>
-                    <div class="day-status" data-key="saturdayStatus">Pampering Day</div>
-                    <div class="day-hours">10:00 - 19:00</div>
+                <div class="gallery-card" style="--i:5"><img src="images/pic17.jpeg" alt="Work 6">
+                    <div class="card-shimmer"></div>
                 </div>
-            </div>
-
-            <!-- Sunday -->
-            <div class="calendar-day open" data-day="sunday">
-                <div class="day-glow"></div>
-                <div class="day-content">
-                    <div class="day-name" data-key="sunday">Sunday</div>
-                    <div class="day-icon">🌺</div>
-                    <div class="day-status" data-key="sundayStatus">Self Care Sunday</div>
-                    <div class="day-hours">10:00 - 19:00</div>
+                <div class="gallery-card" style="--i:6"><img src="images/hair_work.jpeg" alt="Work 7">
+                    <div class="card-shimmer"></div>
+                </div>
+                <div class="gallery-card" style="--i:7"><img src="images/pic1.jpeg" alt="Work 8">
+                    <div class="card-shimmer"></div>
+                </div>
+                <div class="gallery-card" style="--i:8"><img src="images/pic12.jpeg" alt="Work 9">
+                    <div class="card-shimmer"></div>
+                </div>
+                <div class="gallery-card" style="--i:9"><img src="images/nails_work1.jpeg" alt="Work 10">
+                    <div class="card-shimmer"></div>
+                </div>
+                <div class="gallery-card" style="--i:10"><img src="images/pic14.jpeg" alt="Work 11">
+                    <div class="card-shimmer"></div>
+                </div>
+                <div class="gallery-card" style="--i:11"><img src="images/pic11.jpeg" alt="Work 12">
+                    <div class="card-shimmer"></div>
                 </div>
             </div>
         </div>
 
-        <div class="calendar-footer">
-            <div class="hours-summary">
-                <div class="summary-icon">⏰</div>
-                <div class="summary-text">
-                    <strong data-key="openingHours">Opening Hours:</strong><br>
-                    <span data-key="hoursDetail">Tuesday - Sunday: 10:00 - 19:00</span>
-                </div>
-            </div>
-
+        <div class="gallery-footer-actions">
+            <p class="gallery-hint-text">hover to pause · click to view</p>
+            <a href="https://www.instagram.com/glowhouseoff" target="_blank" rel="noopener noreferrer"
+                class="instagram-gallery-btn">
+                <i class="fab fa-instagram"></i>
+                <span data-key="instagramBtn">See All Our Work on Instagram</span>
+                <span class="ig-arrow">↗</span>
+            </a>
             <a href="#booking" class="glow-button">
                 <span class="button-icon">💫</span>
                 <span data-key="bookSession">Book Your Session</span>
             </a>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="gallery-lightbox" id="galleryLightbox">
+            <div class="lightbox-backdrop"></div>
+            <button class="lightbox-close" id="lightboxClose">✕</button>
+            <button class="lightbox-prev" id="lightboxPrev">‹</button>
+            <button class="lightbox-next" id="lightboxNext">›</button>
+            <div class="lightbox-img-wrap">
+                <img id="lightboxImg" src="" alt="">
+            </div>
         </div>
     </section>
 
